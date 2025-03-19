@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "web-template"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: tab1.qmd
+        text: Tab One
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+
