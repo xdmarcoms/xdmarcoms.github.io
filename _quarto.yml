@@ -9,9 +9,13 @@ website:
       #- href: index.qmd
       #  text: Home
       - href: tab1.qmd
-        text: Tab One
+        text: Programme Structure
       - href: tab2.qmd
-        text: Tab Two
+        text: Faculty
+      - href: tab3.qmd
+        text: Requirements
+      - href: tab4.qmd
+        text: Applications Process
 format:
   html:
     theme:
