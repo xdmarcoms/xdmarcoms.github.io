@@ -1,9 +1,45 @@
 ---
-title: "About"
+title: "Programme Structure"
+output: html_document
 ---
 
-About this site
+```{r, echo=FALSE}
+# Create the data frame with course information
+courses <- data.frame(
+  Course_Code = c("XDM_514", "XDM_512", "XDM_522", "XDM_513", "XDM_524", "XDM_511", "XDM_521", "XDM_523", "XDM_525", "XDM_531"),
+  Course_Name = c("Value-Based Marketing", "Data and Digital Literacy", 
+                  "Agile and Sustainable Marketing Strategies", 
+                  "Internet of Things (IoT) in Marketing", 
+                  "Content Creation and Management", "Experiential Marketing", 
+                  "Reputation and Media Management", "Data Analysis and AI", 
+                  "Academic Research Design and Consulting Practice", 
+                  "Special Topics"),
+  Description = c("The course offers a deep dive into contemporary marketing practices that prioritize creating, delivering, and communicating value for both customers and organizations. It explores how the concept of value has evolved in marketing, transitioning from a traditional product-centric focus to a more customer-centric and service-dominant approach. Through experiential practices, students learn how value is shaped through innovation, branding, service quality, and stakeholder engagement.",
+                  "This course provides students with a comprehensive understanding of data-driven marketing strategies and analytical techniques to extract valuable consumer insights. Students gain proficiency in R for data manipulation and visualization, while exploring experimental research methods like conjoint analysis. Key aspects include workshops and hands-on exercises, culminating in a final project where students independently design and execute a data-driven marketing analysis.",
+                  "This course explores the intersection of agility, sustainability, and ethical decision-making in modern marketing. Students will study ethical marketing, stakeholder relationships, sustainability, and value creation. The module highlights the evolving digital landscape and emphasizes responsible communication, research ethics, and digital well-being, preparing students to navigate contemporary marketing complexities.",
+                  "The course familiarizes students with IoT devices, X-realities, and mobile apps, exploring their uses in consumer behavior, market intelligence, customer service, and more. Students apply their knowledge in practical workshops and experiments with IoT devices and technologies, preparing them to lead organizations in providing unique, personalized, and successful consumer experiences while addressing current social and environmental problems.",
+                  "This course emphasizes the practical skills required to transform data into engaging digital experiences for marketing and communication contexts. Students will use a full technology stack from survey creation tools (Google Forms) to R-based analytics (RStudio, Quarto) to generate visually compelling dashboards. The course provides hands-on experience in content management and visualization.",
+                  "In this course, students are introduced to experiential marketing, a framework that blends physical and digital experiences. They explore how new technologies like Big Data, Social Media, AI, and X-realities are changing the marketplace. The course challenges traditional marketing approaches and introduces the experiential marketing mix framework, focusing on creating interactive, hybrid brand experiences.",
+                  "This course focuses on reputation management, helping students understand how to manage public image, communication channels, and relationships with stakeholders. Students explore public relations, media relations, guerrilla marketing, and crisis communication techniques to safeguard brand reputation in a rapidly changing media landscape.",
+                  "This course provides both theoretical knowledge and practical skills in digital media analysis and AI tools for marketing. Students will critically assess data and apply digital tools to interpret consumer insights and shape business decisions. The course includes workshops with interactive tools and software for data collection, gamified applications, and AR technologies.",
+                  "This course equips students with research design and consulting practice skills, covering everything from hypothesis formulation and data collection techniques to consulting methodologies. Students will engage in real-world consulting scenarios, working on business capability audits and strategic marketing projects. The course ends with a research or consulting proposal.",
+                  "This module explores contemporary issues and trends in experiential digital marketing. Students engage with cutting-edge research and industry developments, analyzing the impact of experiential marketing on business and society. The course encourages critical analysis and discussion, helping students develop academic skills and evaluate current marketing strategies.")
+)
 
-```{r}
-1 + 1
+# Display the table as an HTML table
+library(knitr)
+kable(courses, format = "html")
+
+
+
+
+# Create a small table for additional programme information
+programme_info <- data.frame(
+  Category = c("Language of Instruction", "Fees", "Length of study"),
+  Details = c("English", "€7,500", "1.5 years")
+)
+
+# Display the table using kable for better formatting
+knitr::kable(programme_info, col.names = c("Category", "Details"), align = "l", caption = "Programme Information")
+
 ```

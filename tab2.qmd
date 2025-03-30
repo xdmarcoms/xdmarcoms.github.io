@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "Faculty"
+output: html_document
 ---
 
-About this site
-
-```{r}
-1 + 1
-```

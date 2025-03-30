@@ -2,16 +2,9 @@
   {
     "objectID": "tab1.html",
     "href": "tab1.html",
-    "title": "About",
+    "title": "Programme Structure",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "tab2.html",
-    "href": "tab2.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Course_Code\nCourse_Name\nDescription\n\n\n\n\nXDM_514\nValue-Based Marketing\nThe course offers a deep dive into contemporary marketing practices that prioritize creating, delivering, and communicating value for both customers and organizations. It explores how the concept of value has evolved in marketing, transitioning from a traditional product-centric focus to a more customer-centric and service-dominant approach. Through experiential practices, students learn how value is shaped through innovation, branding, service quality, and stakeholder engagement.\n\n\nXDM_512\nData and Digital Literacy\nThis course provides students with a comprehensive understanding of data-driven marketing strategies and analytical techniques to extract valuable consumer insights. Students gain proficiency in R for data manipulation and visualization, while exploring experimental research methods like conjoint analysis. Key aspects include workshops and hands-on exercises, culminating in a final project where students independently design and execute a data-driven marketing analysis.\n\n\nXDM_522\nAgile and Sustainable Marketing Strategies\nThis course explores the intersection of agility, sustainability, and ethical decision-making in modern marketing. Students will study ethical marketing, stakeholder relationships, sustainability, and value creation. The module highlights the evolving digital landscape and emphasizes responsible communication, research ethics, and digital well-being, preparing students to navigate contemporary marketing complexities.\n\n\nXDM_513\nInternet of Things (IoT) in Marketing\nThe course familiarizes students with IoT devices, X-realities, and mobile apps, exploring their uses in consumer behavior, market intelligence, customer service, and more. Students apply their knowledge in practical workshops and experiments with IoT devices and technologies, preparing them to lead organizations in providing unique, personalized, and successful consumer experiences while addressing current social and environmental problems.\n\n\nXDM_524\nContent Creation and Management\nThis course emphasizes the practical skills required to transform data into engaging digital experiences for marketing and communication contexts. Students will use a full technology stack from survey creation tools (Google Forms) to R-based analytics (RStudio, Quarto) to generate visually compelling dashboards. The course provides hands-on experience in content management and visualization.\n\n\nXDM_511\nExperiential Marketing\nIn this course, students are introduced to experiential marketing, a framework that blends physical and digital experiences. They explore how new technologies like Big Data, Social Media, AI, and X-realities are changing the marketplace. The course challenges traditional marketing approaches and introduces the experiential marketing mix framework, focusing on creating interactive, hybrid brand experiences.\n\n\nXDM_521\nReputation and Media Management\nThis course focuses on reputation management, helping students understand how to manage public image, communication channels, and relationships with stakeholders. Students explore public relations, media relations, guerrilla marketing, and crisis communication techniques to safeguard brand reputation in a rapidly changing media landscape.\n\n\nXDM_523\nData Analysis and AI\nThis course provides both theoretical knowledge and practical skills in digital media analysis and AI tools for marketing. Students will critically assess data and apply digital tools to interpret consumer insights and shape business decisions. The course includes workshops with interactive tools and software for data collection, gamified applications, and AR technologies.\n\n\nXDM_525\nAcademic Research Design and Consulting Practice\nThis course equips students with research design and consulting practice skills, covering everything from hypothesis formulation and data collection techniques to consulting methodologies. Students will engage in real-world consulting scenarios, working on business capability audits and strategic marketing projects. The course ends with a research or consulting proposal.\n\n\nXDM_531\nSpecial Topics\nThis module explores contemporary issues and trends in experiential digital marketing. Students engage with cutting-edge research and industry developments, analyzing the impact of experiential marketing on business and society. The course encourages critical analysis and discussion, helping students develop academic skills and evaluate current marketing strategies.\n\n\n\n\n\n\n\n\nProgramme Information\n\n\nCategory\nDetails\n\n\n\n\nLanguage of Instruction\nEnglish\n\n\nFees\n€7,500\n\n\nLength of study\n1.5 years"
   },
   {
     "objectID": "index.html",
@@ -30,14 +23,7 @@
   {
     "objectID": "tab4.html",
     "href": "tab4.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "tab3.html",
-    "href": "tab3.html",
-    "title": "About",
+    "title": "Applications Process",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
