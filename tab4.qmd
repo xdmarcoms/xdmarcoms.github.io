@@ -1,9 +1,6 @@
 ---
 title: "Applications Process"
+output: html_document
 ---
 
-About this site
 
-```{r}
-1 + 1
-```

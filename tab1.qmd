@@ -4,7 +4,10 @@ output: html_document
 ---
 
 ```{r, echo=FALSE}
-# Create the data frame with course information
+library(magrittr)
+library(kableExtra)
+
+# Δημιουργία του πίνακα με πληροφορίες μαθημάτων
 courses <- data.frame(
   Course_Code = c("XDM_514", "XDM_512", "XDM_522", "XDM_513", "XDM_524", "XDM_511", "XDM_521", "XDM_523", "XDM_525", "XDM_531"),
   Course_Name = c("Value-Based Marketing", "Data and Digital Literacy", 
@@ -26,12 +29,11 @@ courses <- data.frame(
                   "This module explores contemporary issues and trends in experiential digital marketing. Students engage with cutting-edge research and industry developments, analyzing the impact of experiential marketing on business and society. The course encourages critical analysis and discussion, helping students develop academic skills and evaluate current marketing strategies.")
 )
 
-# Display the table as an HTML table
-library(knitr)
-kable(courses, format = "html")
-
-
-
+# Εμφάνιση του πίνακα με στοίχιση
+kable(courses, format = "html", caption = "Programme Structure") %>%
+  kable_styling(full_width = FALSE) %>%
+  print()
+    
 
 # Create a small table for additional programme information
 programme_info <- data.frame(

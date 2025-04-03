@@ -2,4 +2,61 @@
 title: "Requirements"
 ---
 
+```{r, echo=FALSE}
+# Φόρτωση της βιβλιοθήκης
+library(gt)
 
+# Δημιουργία dataframe με τίτλους μόνο στην 1η στήλη
+data <- data.frame(
+  Category = c(
+    "EDUCATIONAL QUALIFICATIONS", "", "",
+    "ENGLISH LANGUAGE", "",
+    "DIGITAL LITERACY", "",
+    "RECOMMENDATION", "",
+    "CV", ""
+  ),
+  Academic_Route = c(
+    "", 
+    "Bachelor’s degree > 6.5/10 for 4-year or 2:2 Honors for 3-year programs obtained within the past 5 years",
+    "A copy of academic transcripts",
+    "",
+    "English language Proficiency",
+    "",
+    "ECDL or University courses",
+    "",
+    "2 letters of recommendation (academic)",
+    "",
+    "Curriculum Vitae (CV)"
+  ),
+  Professional_Route = c(
+    "",
+    "Bachelor’s degree & > 3 years of work experience OR 10 years of work Experience",
+    "A copy of academic transcripts (if candidates have a bachelor’s degree)",
+    "",
+    "English language Proficiency or CUT exam",
+    "",
+    "ECDL or University courses",
+    "",
+    "2 letters of recommendation (academic or from employers)",
+    "",
+    "Curriculum Vitae (CV)"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Δημιουργία πίνακα με `gt`
+data %>%
+  gt() %>%
+  tab_header(title = "Requirements") %>%
+  cols_label(
+    Category = "",
+    Academic_Route = "Academic Route",
+    Professional_Route = "Professional Route"
+  ) %>%
+  tab_style(
+    style = cell_text(weight = "bold", align = "center"),
+    locations = cells_body(columns = Category, rows = c(1, 4, 6, 8, 10)) # Οι τίτλοι bold
+  ) %>%
+  opt_table_lines()
+
+```
