@@ -1,7 +1,25 @@
 ---
 title: "Programme Structure"
-output: html_document
+output: 
+  html_document:
+    css: "styles.css"  # Μπορείς να προσθέσεις ένα εξωτερικό CSS αρχείο αν το επιθυμείς
+header-includes:
+  - |
+    <style>
+      body { 
+        font-family: Arial, sans-serif; 
+        padding: 20px; 
+        text-align: justify;  /* Στοίχιση του κειμένου */
+      }
+      .description { 
+        font-size: 14px; 
+        color: #333; 
+        text-align: justify;  /* Στοίχιση του κειμένου στις περιγραφές των μαθημάτων */
+      }
+    </style>
 ---
+
+## Programme Courses
 
 ```{r, echo=FALSE}
 library(magrittr)
@@ -30,11 +48,13 @@ courses <- data.frame(
 )
 
 # Εμφάνιση του πίνακα με στοίχιση
-kable(courses, format = "html", caption = "Programme Structure") %>%
-  kable_styling(full_width = FALSE) %>%
-  print()
-    
+kable(courses, format = "html")
+```
 
+## Programme Information
+
+
+```{r, echo=FALSE}
 # Create a small table for additional programme information
 programme_info <- data.frame(
   Category = c("Language of Instruction", "Fees", "Length of study"),
@@ -42,6 +62,5 @@ programme_info <- data.frame(
 )
 
 # Display the table using kable for better formatting
-knitr::kable(programme_info, col.names = c("Category", "Details"), align = "l", caption = "Programme Information")
-
+knitr::kable(programme_info, col.names = c("Category", "Details"), align = "l")
 ```
