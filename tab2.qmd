@@ -42,8 +42,12 @@ css <- "
     margin-bottom: 10px;
     text-decoration: none;
     color: blue;
+    font-size: 16px;
   }
 
+    .link-container a {
+    font-size: 14px;
+    }
 </style>
 "
 ```
@@ -175,6 +179,5 @@ faculty_html <- div(class = "team-section",
 
 # Εκτύπωση CSS και HTML στο R Markdown
 HTML(paste(css, as.character(faculty_html), sep = "\n"))
-
 
 ```

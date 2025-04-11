@@ -16,6 +16,7 @@ website:
         text: Requirements
       - href: tab4.qmd
         text: Applications Process
+    logo: images/cutlogo.png
 format:
   html:
     theme:

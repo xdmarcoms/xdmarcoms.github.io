@@ -1,39 +1,60 @@
 ---
-title: MSc in Experiential Digital Marketing Communications (XDMarComs)
+output: html_document
 ---
 
-Master the Future of Marketing 
+<h1 style="text-align: center;">MSc in Experiential Digital Marketing Communications (XDMarComs)</h1>
 
-::: {.grid}
+<h2 style="text-align: center;">Master the Future of Marketing</h2>
 
-::: {.g-col-6}
-Step into the future of marketing with the MSc in Experiential Digital Marketing Communications (XDMarComs) at Cyprus University of Technology (CUT). 
-This cutting-edge programme equips students with the knowledge and skills needed to create engaging, technology-driven brand experiences that resonate with the connected global consumer. 
-Combining multidisciplinary approaches and industry-relevant insights, XDMarComs blends theory with practical learning, preparing graduates to lead in a hyper-connected world. 
-Through a flexible hybrid curriculum delivered in intensive blocks, you will master IoT marketing, data analytics, AI applications, and content creation while developing the critical soft skills employers urgently seek. 
-With a "Think Human First" philosophy, XDMarComs not only transforms your résumé – it empowers you to change lives and positively impact the world. 
-XDMarComs isn't just another digital marketing program—it's designed to foster creativity, adaptability, and leadership in an interconnected world. 
-Students benefit from a tailored, flexible curriculum that emphasises experiential learning, with direct access to leading academics and industry professionals. 
-The program’s focus on transferable skills like teamwork, problem-solving, and critical thinking ensures graduates are ready to thrive in fast-paced, global marketing environments. 
-:::
+<div style="text-align: center;">
+  <img src="images/xdmarcomslogo.png" style="border-radius: 30px; width: 300px;">
+</div>
 
-::: {.g-col-6}
-![](images/hex-logo.svg){style="border-radius: 8px;"}
-:::
+---
 
-:::
+<!-- Πρώτη Παράγραφος με εικόνα δεξιά και κείμενο justify -->
 
-**Flexible Delivery Structure**
+<div style="display: flex; align-items: center; justify-content: space-between; margin-top: 30px;">
+  <div style="width: 70%; text-align: justify;">
+Step into the future of marketing with the MSc in Experiential Digital Marketing Communications (XDMarComs) at Cyprus University of Technology (CUT). This cutting-edge programme equips students with the knowledge and skills needed to create engaging, technology-driven brand experiences that resonate with the connected global consumer. Combining multidisciplinary approaches and industry-relevant insights, XDMarComs blends theory with practical learning, preparing graduates to lead in a hyper-connected world. Through a flexible hybrid curriculum delivered in intensive blocks, you will master IoT marketing, data analytics, AI applications, and content creation while developing the critical soft skills employers urgently seek. With a "Think Human First" philosophy, XDMarComs not only transforms your résumé – it empowers you to change lives and positively impact the world. 
+  </div>
+  <img src="images/image4.jpg" style="width: 200px; border-radius: 10px; margin-left: 30px;">
+</div>
 
+---
+
+<!-- Δεύτερη Παράγραφος -->
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-top: 30px;">
+  <div style="width: 70%; text-align: justify;">
+XDMarComs isn't just another digital marketing program—it's designed to foster creativity, adaptability, and leadership in an interconnected world. Students benefit from a tailored, flexible curriculum that emphasises experiential learning, with direct access to leading academics and industry professionals. The program’s focus on transferable skills like teamwork, problem-solving, and critical thinking ensures graduates are ready to thrive in fast-paced, global marketing environments. 
+  </div>
+  <img src="images/image2.jpg" style="width: 200px; border-radius: 10px; margin-left: 20px;">
+</div>
+
+<h2 style="color: #16537e;">What Sets Our Programme Apart</h2>
+
+### Flexible Delivery Structure
+
+<div style="text-align: justify;">
 XDMarComs provides a flexible instructional schedule designed to meet the needs of modern professionals. The programme is structured around intensive five-week learning modules that maximise engagement while minimising disruption to professional commitments. This delivery model features face-to-face instruction centred on weekend sessions, interactive workshops, synchronous online seminars, and asynchronous digital content delivery. This hybrid delivery framework enables participants to maintain professional momentum while engaging with rigorous academic content. The objective is to create an optimal balance between structured pedagogical guidance and self-directed professional development.
+</div>
 
-**Integrated Cross-Disciplinary Framework**
+---
 
+### Integrated Cross-Disciplinary Framework
+
+<div style="text-align: justify;">
 Excellence in contemporary marketing communications requires the synthesis of insights from multiple disciplines. Our curriculum strategically blends perspectives from technology, psychology, business analytics, creative design, consumer culture and communication studies, enabling graduates to identify strategic opportunities and develop comprehensive solutions that transcend traditional disciplinary boundaries.
+</div>
 
-**Continuous Professional Development**
+---
 
+### Continuous Professional Development
+<div style="text-align: justify;">
 In addition to immediate career advancement, the programme fosters metacognitive abilities and self-regulatory learning skills that are vital for ongoing professional development. Graduates acquire advanced analytical frameworks and adaptive learning methodologies, enabling them to continually acquire expertise throughout their careers in digital marketing environments.
-::: {.footer style="text-align: left; padding: 1rem; margin-top: 10rem;"}
+</div>
+
+---
 
 © 2025 xdmarcoms. All rights reserved. | [Privacy Policy](#) | [Terms of Service](#)

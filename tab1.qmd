@@ -47,8 +47,11 @@ courses <- data.frame(
                   "This module explores contemporary issues and trends in experiential digital marketing. Students engage with cutting-edge research and industry developments, analyzing the impact of experiential marketing on business and society. The course encourages critical analysis and discussion, helping students develop academic skills and evaluate current marketing strategies.")
 )
 
-# Εμφάνιση του πίνακα με στοίχιση
-kable(courses, format = "html")
+# Εμφάνιση του πίνακα με στοίχιση και πιο ανοιχτό κείμενο
+kable(courses, format = "html") %>%
+  kable_styling("striped") %>%
+  column_spec(3, extra_css = "text-align: justify;")
+
 ```
 
 ## Programme Information
