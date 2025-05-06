@@ -47,6 +47,9 @@ p {
   text-align: justify;
 }
 
+.blue-title {
+  color: #16537e;
+}
 </style>
 
 # MSc in Experiential Digital Marketing Communications (XDMarComs) {.center}
@@ -93,15 +96,15 @@ To foster a student-centric, innovation-driven learning environment where indivi
 
 ## What Sets Our Programme Apart
 
-### Flexible Delivery Structure
+<h3 class="blue-title">Flexible Delivery Structure</h3>
 
 XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.
 
-### Integrated Cross-Disciplinary Framework
+<h3 class="blue-title">Integrated Cross-Disciplinary Framework</h3>
 
 Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.
 
-### Continuous Professional Development
+<h3 class="blue-title">Continuous Professional Development</h3>
 
 Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.
 

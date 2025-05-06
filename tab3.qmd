@@ -1,23 +1,37 @@
 ---
-title: "Requirements"
+title: "Admission Requirements"
 ---
 
+<style>
+p {
+  text-align: justify;
+}
+</style>
+
+<p> The XDMarComs MSc is an elite program designed on the basis of state-of-the-art educational design principles and using teaching techniques which combine academic rigour with practical application. It provides a rich learning experience and advances the personal development and professional networking of participants by welcoming a diverse student body. It values both academic achievement and professional experience and provides a personalized learning environment, tailored to individual needs and aspirations. It offers a traditional, academic entry pathway and a professional one.
+</p>
+
 ```{r, echo=FALSE}
-# Φόρτωση της βιβλιοθήκης
 library(gt)
 
-# Δημιουργία dataframe με τίτλους μόνο στην 1η στήλη
+# Δημιουργία dataframe
 data <- data.frame(
   Category = c(
-    "EDUCATIONAL QUALIFICATIONS", "", "",
-    "ENGLISH LANGUAGE", "",
-    "DIGITAL LITERACY", "",
-    "RECOMMENDATION", "",
-    "CV", ""
+    "Educational Qualifications",
+    "Educational Qualifications",
+    "Educational Qualifications",
+    "English Language",
+    "English Language",
+    "Digital Literacy",
+    "Digital Literacy",
+    "Recommendation",
+    "Recommendation",
+    "CV",
+    "CV"
   ),
   Academic_Route = c(
     "", 
-    "Bachelor’s degree > 6.5/10 for 4-year or 2:2 Honors for 3-year programs obtained within the past 5 years",
+    "4-year Bachelor’s degree with a grade of at least 6.5/10 or 3-year Bachelor’s degree with a grade of at least 2:2 Honors - In both cases, the degree needs to have been obtained within the past 5 years.",
     "A copy of academic transcripts",
     "",
     "English language Proficiency",
@@ -30,12 +44,12 @@ data <- data.frame(
   ),
   Professional_Route = c(
     "",
-    "Bachelor’s degree & > 3 years of work experience OR 10 years of work Experience",
+    "Bachelor’s degree and at least 3 years of work experience or 10 years of work experience ",
     "A copy of academic transcripts (if candidates have a bachelor’s degree)",
     "",
     "English language Proficiency or CUT exam",
     "",
-    "ECDL or University courses",
+    "ECDL",
     "",
     "2 letters of recommendation (academic or from employers)",
     "",
@@ -44,19 +58,38 @@ data <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Δημιουργία πίνακα με `gt`
+# Δημιουργία πίνακα με gt
 data %>%
   gt() %>%
-  tab_header(title = "Requirements") %>%
   cols_label(
     Category = "",
     Academic_Route = "Academic Route",
     Professional_Route = "Professional Route"
   ) %>%
+  # Κεντράρισμα όλων των κελιών
   tab_style(
-    style = cell_text(weight = "bold", align = "center"),
-    locations = cells_body(columns = Category, rows = c(1, 4, 6, 8, 10)) # Οι τίτλοι bold
+    style = cell_text(align = "center"),
+    locations = cells_body(
+      columns = c(Category, Academic_Route, Professional_Route)
+    )
   ) %>%
-  opt_table_lines()
-
+  # Αριστερή στοίχιση μόνο για τις γραμμές με τίτλους κατηγορίας
+  tab_style(
+    style = cell_text(align = "left", weight = "bold"),
+    locations = cells_body(
+      columns = Category,
+      rows = Category %in% c(
+        "Educational Qualifications", 
+        "English Language", 
+        "Digital Literacy", 
+        "Recommendation", 
+        "CV"
+      )
+    )
+  ) %>%
+  # Απόκρυψη επαναλαμβανόμενων κατηγοριών για οπτικό "merge"
+  text_transform(
+    locations = cells_body(columns = c(Category)),
+    fn = function(x) ifelse(duplicated(x), "", x)
+  )
 ```
