@@ -1,5 +1,4 @@
 ---
-title: "Programme Structure"
 output: 
   html_document:
     css: "styles.css"

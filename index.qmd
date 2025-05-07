@@ -37,6 +37,12 @@ format: html
   font-size: 0.9em;
   margin-top: 30px;
   color: #777;
+  
+}
+
+.footer a {
+  color: #16537e;
+  text-decoration: none;
 }
 
 h2, h3 {

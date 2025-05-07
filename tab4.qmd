@@ -6,7 +6,7 @@ format: html
 
 <style>
   a {
-    color: blue;
+    color: #16537e;
   }
 </style>
 
