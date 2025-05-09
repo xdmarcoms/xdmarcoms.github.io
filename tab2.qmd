@@ -2,16 +2,19 @@
 output: html_document
 ---
 
-```{r, echo=FALSE}
-library(htmltools)
-
-# CSS Styling
-css <- "
 <style>
-  body { font-family: Arial, sans-serif; padding: 20px; display: flex; flex-direction: row; }
+  body { font-family: Arial, sans-serif; padding: 20px; display: flex; flex-direction: column; }
   .team-section { max-width: 900px; margin: auto; }
   .team-title { font-size: 28px; font-weight: bold; margin-bottom: 20px; }
-  .member-container { display: flex; align-items: center; margin-top: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+  
+  .member-container { 
+    display: flex; 
+    align-items: center; 
+    margin-top: 20px; 
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 20px;
+  }
+  
   .member-image {
     width: 170px;
     height: 220px;
@@ -19,10 +22,26 @@ css <- "
     margin-right: 20px;
     object-fit: cover;
   }
+  
   .member-info { flex: 1; }
-  .member-name { font-size: 20px; font-weight: bold; cursor: pointer; color: #16537e; text-decoration: underline; }
+  
+  .member-name { 
+    font-size: 20px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    color: #16537e; 
+    text-decoration: underline; 
+  }
+
   .member-role { font-size: 16px; color: gray; }
-  .member-description { font-size: 14px; color: #333; text-align: justify; margin-left: -15px; }
+  
+  .member-description { 
+    font-size: 14px; 
+    color: #333; 
+    text-align: justify; 
+    margin-left: -15px; 
+  }
+  
   .link-container { margin-top: 10px; }
 
   .menu {
@@ -49,183 +68,199 @@ css <- "
 
   ul { padding-left: 20px; }
 </style>
-"
+
+
+
+## Christiana Tsaousi {#christiana}
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/tsiaousi.jpg" class="member-image" alt="Christiana Tsaousi" />
+  <div class="member-info">
+    <div class="member-role">Programme Coordinator, Lecturer in Consumer Culture</div>
+    <ul>
+      <li class="member-description">PhD in Sociology of Consumption (University of Leicester).</li>
+      <li class="member-description">Taught at Bournemouth, Leicester, Coventry, Royal Holloway.</li>
+      <li class="member-description">Research on consumer culture and identity.</li>
+      <li class="member-description">Focuses on feminism, gender, fashion, media.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/pc/staff/christiana.tsaousi/?languageId=1" target="_blank" rel="noopener noreferrer">
+        Tap here and learn more about Christiana Tsaousi
+      </a>
+    </div>
+  </div>
+</div>
+')
 ```
 
 
-```{r, echo=FALSE}
-# Faculty members with bullet-point descriptions
-faculty_members <- list(
-  list(
-    name = "Christiana Tsaousi",
-    role = "Programme Coordinator, Lecturer in Consumer Culture",
-    img = "images/tsiaousi.jpg",
-    description = list(
-      "PhD in Sociology of Consumption (University of Leicester).",
-      "Taught at Bournemouth, Leicester, Coventry, Royal Holloway.",
-      "Research on consumer culture and identity.",
-      "Focuses on feminism, gender, fashion, media."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/pc/staff/christiana.tsaousi/?languageId=1",
-      caption = "Tap here and learn more about Christiana Tsaousi"
-    ),
-    id = "christiana"
-  ),
+## Anna Zarkada {#anna}
 
-  list(
-    name = "Anna Zarkada",
-    role = "Associate Professor",
-    img = "images/zarkada.jpg",
-    description = list(
-      "PhD in Services Science (QUT, Australia).",
-      "Taught across Europe, Asia, and Australia.",
-      "100+ academic publications and awards.",
-      "Expert in corporate culture and sustainability."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/pc/staff/%CE%86%CE%BD%CE%BD%CE%B1+%CE%96%CE%B1%CF%81%CE%BA%CE%AC%CE%B4%CE%B1/?languageId=1",
-      caption = "Tap here and learn more about Anna Zarkada"
-    ),
-    id = "anna"
-  ),
-
-  list(
-    name = "Vasiliki Triga",
-    role = "Associate Professor",
-    img = "images/trigka.jpg",
-    description = list(
-      "PhD from European University Institute, Florence.",
-      "Taught in Zurich, Paris, Thessaloniki.",
-      "Research in political communication and referendums.",
-      "Founder of DigiPols Research Lab."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/cis/staff/vasiliki.triga/?languageId=1",
-      caption = "Tap here and learn more about Vasiliki Triga"
-    ),
-    id = "vasiliki"
-  ),
-
-  list(
-    name = "Costas Djouvas",
-    role = "Associate Professor",
-    img = "images/costas.jpg",
-    description = list(
-      "PhD from City University of New York, funded by NSF.",
-      "Collaborated with MIT and Naval Research Lab.",
-      "Research on Big Data and socio-cultural phenomena."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/cis/staff/costas.tziouvas/?languageId=1#a",
-      caption = "Tap here and learn more about Costas Djouvas"
-    ),
-    id = "costas"
-  ),
-
-  list(
-    name = "Yioula Melanthiou",
-    role = "Associate Professor",
-    img = "images/melanthiou.png",
-    description = list(
-      "PhD in Marketing (University of Manchester).",
-      "Experience in teaching and doctoral supervision.",
-      "Research in Social Media Marketing, Consumer Behaviour.",
-      "Former Research Director in a multinational company."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/pc/staff/Yioula+Melanthiou/?languageId=1",
-      caption = "Tap here and learn more about Yioula Melanthiou"
-    ),
-    id = "yioula"
-  ),
-
-  list(
-    name = "Erasmia Leonidou",
-    role = "Lecturer",
-    img = "images/leonidou.jpg",
-    description = list(
-      "DBA in Intercultural Communication.",
-      "BA in History and Archaeology (University of Cyprus).",
-      "20+ publications in CSR, HRM, and Marketing."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/pc/staff/erasmia.leonidou/?languageId=1",
-      caption = "Tap here and learn more about Erasmia Leonidou"
-    ),
-    id = "erasmia"
-  ),
-
-  list(
-    name = "Nikandros Ioannidis",
-    role = "Special Teaching Staff",
-    img = "images/ioannides.jpg",
-    description = list(
-      "PhD from Pompeu Fabra University, Spain.",
-      "Focus on political communication and technology.",
-      "Publications in top international journals.",
-      "Awarded by the President of Cyprus for excellence."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/pc/staff/nikandros.ioannidis/?languageId=1",
-      caption = "Tap here and learn more about Nikandros Ioannidis"
-    ),
-    id = "nikandros"
-  ),
-
-  list(
-    name = "Maria Voutsa",
-    role = "Special Teaching Staff",
-    img = "images/voutsa.jpg",
-    description = list(
-      "PhD in Advertising and Consumer Behavior (AUTH).",
-      "Research in advertising effectiveness, digital media.",
-      "Coordinator of AD.CUT student team.",
-      "Publications in peer-reviewed journals (JCB, IJIMA)."
-    ),
-    link = list(
-      url = "https://www.cut.ac.cy/faculties/comm/pc/staff/Maria+Voutsa/?languageId=1",
-      caption = "Tap here and learn more about Maria Voutsa"
-    ),
-    id = "maria"
-  )
-)
-
-# Create HTML output
-faculty_html <- div(class = "team-section",
-  h2(class = "team-title", "Faculty Members"),
-  
-  div(class = "menu",
-      lapply(faculty_members, function(member) {
-        a(href = paste0("#", member$id), member$name)
-      })
-  ),
-  
-  lapply(faculty_members, function(member) {
-    div(class = "member-container", id = member$id,
-        img(src = member$img, class = "member-image"),
-        div(class = "member-info",
-            div(class = "member-name", member$name),
-            div(class = "member-role", member$role),
-            tags$ul(
-              lapply(member$description, function(bullet) {
-                tags$li(class = "member-description", bullet)
-              })
-            ),
-            if (!is.null(member$link)) {
-              div(class = "link-container",
-                  a(href = member$link$url, target = "_blank",
-                    style = "text-decoration: none; color: black;",
-                    member$link$caption
-                  )
-              )
-            }
-        )
-    )
-  })
-)
-
-# Εκτύπωση CSS και HTML στο R Markdown
-HTML(paste(css, as.character(faculty_html), sep = "\n"))
-
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/zarkada.jpg" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Associate Professor</div>
+    <ul>
+      <li class="member-description">PhD in Services Science (QUT, Australia).</li>
+      <li class="member-description">Taught across Europe, Asia, and Australia.</li>
+      <li class="member-description">100+ academic publications and awards.</li>
+      <li class="member-description">Expert in corporate culture and sustainability.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/pc/staff/%CE%86%CE%BD%CE%BD%CE%B1+%CE%96%CE%B1%CF%81%CE%BA%CE%AC%CE%B4%CE%B1/?languageId=1" target="_blank">
+        Tap here and learn more about Anna Zarkada
+      </a>
+    </div>
+  </div>
+</div>
+')
 ```
+
+## Vasiliki Triga {#vasiliki}
+
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/trigka.jpg" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Associate Professor</div>
+    <ul>
+      <li class="member-description">PhD from European University Institute, Florence.</li>
+      <li class="member-description">Taught in Zurich, Paris, Thessaloniki.</li>
+      <li class="member-description">Research in political communication and referendums.</li>
+      <li class="member-description">Founder of DigiPols Research Lab.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/cis/staff/vasiliki.triga/?languageId=1" target="_blank">
+        Tap here and learn more about Vasiliki Triga
+      </a>
+    </div>
+  </div>
+</div>
+')
+```
+
+## Costas Djouvas {#costas}
+
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/costas.jpg" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Associate Professor</div>
+    <ul>
+      <li class="member-description">PhD from City University of New York, funded by NSF.</li>
+      <li class="member-description">Collaborated with MIT and Naval Research Lab.</li>
+      <li class="member-description">Research on Big Data and socio-cultural phenomena.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/cis/staff/costas.tziouvas/?languageId=1#a" target="_blank">
+        Tap here and learn more about Costas Djouvas
+      </a>
+    </div>
+  </div>
+</div>
+')
+```
+
+## Yioula Melanthiou {#yioula}
+
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/melanthiou.png" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Associate Professor</div>
+    <ul>
+      <li class="member-description">PhD in Marketing (University of Manchester).</li>
+      <li class="member-description">Experience in teaching and doctoral supervision.</li>
+      <li class="member-description">Research in Social Media Marketing, Consumer Behaviour.</li>
+      <li class="member-description">Former Research Director in a multinational company.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/pc/staff/Yioula+Melanthiou/?languageId=1" target="_blank">
+        Tap here and learn more about Yioula Melanthiou
+      </a>
+    </div>
+  </div>
+</div>
+')
+```
+
+## Erasmia Leonidou {#erasmia}
+
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/leonidou.jpg" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Lecturer</div>
+    <ul>
+      <li class="member-description">DBA in Intercultural Communication.</li>
+      <li class="member-description">BA in History and Archaeology (University of Cyprus).</li>
+      <li class="member-description">20+ publications in CSR, HRM, and Marketing.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/pc/staff/erasmia.leonidou/?languageId=1" target="_blank">
+        Tap here and learn more about Erasmia Leonidou
+      </a>
+    </div>
+  </div>
+</div>
+')
+```
+
+## Nikandros Ioannidis {#nikandros}
+
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/ioannides.jpg" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Special Teaching Staff</div>
+    <ul>
+      <li class="member-description">PhD from Pompeu Fabra University, Spain.</li>
+      <li class="member-description">Focus on political communication and technology.</li>
+      <li class="member-description">Publications in top international journals.</li>
+      <li class="member-description">Awarded by the President of Cyprus for excellence.</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/pc/staff/nikandros.ioannidis/?languageId=1" target="_blank">
+        Tap here and learn more about Nikandros Ioannidis
+      </a>
+    </div>
+  </div>
+</div>
+')
+```
+
+## Maria Voutsa {#maria}
+
+```{r, echo=FALSE, results='asis'}
+knitr::raw_html('
+<div class="member-container">
+  <img src="images/voutsa.jpg" class="member-image">
+  <div class="member-info">
+    <div class="member-role">Special Teaching Staff</div>
+    <ul>
+      <li class="member-description">PhD in Advertising and Consumer Behavior (AUTH).</li>
+      <li class="member-description">Research in advertising effectiveness, digital media.</li>
+      <li class="member-description">Coordinator of AD.CUT student team.</li>
+      <li class="member-description">Publications in peer-reviewed journals (JCB, IJIMA).</li>
+    </ul>
+    <div class="link-container">
+      <a href="https://www.cut.ac.cy/faculties/comm/pc/staff/Maria+Voutsa/?languageId=1" target="_blank">
+        Tap here and learn more about Maria Voutsa
+      </a>
+    </div>
+  </div>
+</div>
+')
+```
+
+
+
+
