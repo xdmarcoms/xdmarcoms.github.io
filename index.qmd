@@ -60,11 +60,12 @@ p {
 
 # MSc in Experiential Digital Marketing Communications (XDMarComs) {.center}
 
-## Master the Future of Marketing {.center}
 
 <div class="center">
   <img src="images/logomaster.jpg" class="logo">
 </div>
+
+## Master the Future of Marketing {.center}
 
 ---
 
@@ -100,7 +101,7 @@ To foster a student-centric, innovation-driven learning environment where indivi
 </div>
 </div>
 
-## What Sets Our Programme Apart
+## Key Features of Our Programme
 
 <h3 class="blue-title">Flexible Delivery Structure</h3>
 
