@@ -12,84 +12,56 @@ p {
 </p>
 
 ```{r, echo=FALSE}
-library(gt)
+suppressMessages({
+  library(gt)
+  library(dplyr)
 
-# Δημιουργία dataframe
-data <- data.frame(
-  Category = c(
-    "Educational Qualifications",
-    "Educational Qualifications",
-    "Educational Qualifications",
-    "English Language",
-    "English Language",
-    "Digital Literacy",
-    "Digital Literacy",
-    "Recommendation",
-    "Recommendation",
-    "CV",
-    "CV"
-  ),
-  Academic_Route = c(
-    "", 
-    "4-year Bachelor’s degree with a grade of at least 6.5/10 or 3-year Bachelor’s degree with a grade of at least 2:2 Honors - In both cases, the degree needs to have been obtained within the past 5 years.",
-    "A copy of academic transcripts",
-    "",
-    "English language Proficiency",
-    "",
-    "ECDL or University courses",
-    "",
-    "2 letters of recommendation (academic)",
-    "",
-    "Curriculum Vitae (CV)"
-  ),
-  Professional_Route = c(
-    "",
-    "Bachelor’s degree and at least 3 years of work experience or 10 years of work experience ",
-    "A copy of academic transcripts (if candidates have a bachelor’s degree)",
-    "",
-    "English language Proficiency or CUT exam",
-    "",
-    "ECDL",
-    "",
-    "2 letters of recommendation (academic or from employers)",
-    "",
-    "Curriculum Vitae (CV)"
-  ),
-  stringsAsFactors = FALSE
-)
-
-# Δημιουργία πίνακα με gt
-data %>%
-  gt() %>%
-  cols_label(
-    Category = "",
-    Academic_Route = "Academic Route",
-    Professional_Route = "Professional Route"
-  ) %>%
-  # Κεντράρισμα όλων των κελιών
-  tab_style(
-    style = cell_text(align = "center"),
-    locations = cells_body(
-      columns = c(Category, Academic_Route, Professional_Route)
-    )
-  ) %>%
-  # Αριστερή στοίχιση μόνο για τις γραμμές με τίτλους κατηγορίας
-  tab_style(
-    style = cell_text(align = "left", weight = "bold"),
-    locations = cells_body(
-      columns = Category,
-      rows = Category %in% c(
-        "Educational Qualifications", 
-        "English Language", 
-        "Digital Literacy", 
-        "Recommendation", 
-        "CV"
-      )
-    )
-  ) %>%
-  # Απόκρυψη επαναλαμβανόμενων κατηγοριών για οπτικό "merge"
-  text_transform(
-    locations = cells_body(columns = c(Category)),
-    fn = function(x) ifelse(duplicated(x), "", x)
+  # Νέο dataframe με τις ζητούμενες αλλαγές
+  data <- data.frame(
+    Category = c(
+      "Educational Qualifications",
+      "",
+      "English Language",
+      "Digital Literacy",
+      "Recommendation",
+      "CV"
+    ),
+    Academic_Route = c(
+      "4-year Bachelor’s degree with a grade of at least 6.5/10 or 3-year Bachelor’s degree with a grade of at least 2:2 Honors - In both cases, the degree needs to have been obtained within the past 5 years.",
+      "",  # Αφαίρεση της πληροφορίας
+      "English language Proficiency",
+      "ECDL or University courses",
+      "2 letters of recommendation (academic)",
+      "Curriculum Vitae (CV)"
+    ),
+    Professional_Route = c(
+      "Bachelor’s degree and at least 3 years of work experience or 10 years of work experience",
+      "",  # Αφαίρεση της πληροφορίας
+      "English language Proficiency or CUT exam",
+      "ECDL",
+      "2 letters of recommendation (academic or from employers)",
+      "Curriculum Vitae (CV)"
+    ),
+    stringsAsFactors = FALSE
   )
+
+  # Δημιουργία πίνακα με gt
+  data %>%
+    gt() %>%
+    cols_label(
+      Category = "",
+      Academic_Route = "Academic Route",
+      Professional_Route = "Professional Route"
+    ) %>%
+    # Κεντράρισμα των κελιών
+    tab_style(
+      style = cell_text(align = "center"),
+      locations = cells_body(columns = c(Academic_Route, Professional_Route))
+    ) %>%
+    # Αριστερή στοίχιση και bold για τις κατηγορίες
+    tab_style(
+      style = cell_text(align = "left", weight = "bold"),
+      locations = cells_body(columns = Category)
+    )
+})
 ```

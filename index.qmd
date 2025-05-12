@@ -62,7 +62,7 @@ p {
 
 
 <div class="center">
-  <img src="images/logomaster.jpg" class="logo">
+  <img src="images/final_logo.png" class="logo">
 </div>
 
 ## Master the Future of Marketing {.center}
