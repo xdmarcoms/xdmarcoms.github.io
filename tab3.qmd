@@ -16,11 +16,10 @@ suppressMessages({
   library(gt)
   library(dplyr)
 
-  # Νέο dataframe με τις ζητούμενες αλλαγές
+  # Νέο dataframe χωρίς την κενή γραμμή
   data <- data.frame(
     Category = c(
       "Educational Qualifications",
-      "",
       "English Language",
       "Digital Literacy",
       "Recommendation",
@@ -28,7 +27,6 @@ suppressMessages({
     ),
     Academic_Route = c(
       "4-year Bachelor’s degree with a grade of at least 6.5/10 or 3-year Bachelor’s degree with a grade of at least 2:2 Honors - In both cases, the degree needs to have been obtained within the past 5 years.",
-      "",  # Αφαίρεση της πληροφορίας
       "English language Proficiency",
       "ECDL or University courses",
       "2 letters of recommendation (academic)",
@@ -36,7 +34,6 @@ suppressMessages({
     ),
     Professional_Route = c(
       "Bachelor’s degree and at least 3 years of work experience or 10 years of work experience",
-      "",  # Αφαίρεση της πληροφορίας
       "English language Proficiency or CUT exam",
       "ECDL",
       "2 letters of recommendation (academic or from employers)",
