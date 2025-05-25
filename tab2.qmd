@@ -5,7 +5,7 @@ output: html_document
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; display: flex; flex-direction: column; }
   .team-section { max-width: 900px; margin: auto; }
-  .team-title { font-size: 28px; font-weight: bold; margin-bottom: 20px; }
+  .team-title { font-size: 30px; font-weight: bold; margin-bottom: 20px; }
   
   .member-container { 
     display: flex; 
@@ -26,7 +26,7 @@ output: html_document
   .member-info { flex: 1; }
   
   .member-name { 
-    font-size: 20px; 
+    font-size: 16px; 
     font-weight: bold; 
     cursor: pointer; 
     color: #16537e; 
@@ -36,7 +36,7 @@ output: html_document
   .member-role { font-size: 16px; color: gray; }
   
   .member-description { 
-    font-size: 14px; 
+    font-size: 16px; 
     color: #333; 
     text-align: justify; 
     margin-left: -15px; 

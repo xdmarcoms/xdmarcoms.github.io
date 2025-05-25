@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/cutlogo.png" alt="" class="navbar-logo">
+    <img src="./images/cutlogoo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">XDMarComs</span>
@@ -119,143 +119,397 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#msc-in-experiential-digital-marketing-communications-xdmarcoms" id="toc-msc-in-experiential-digital-marketing-communications-xdmarcoms" class="nav-link active" data-scroll-target="#msc-in-experiential-digital-marketing-communications-xdmarcoms">MSc in Experiential Digital Marketing Communications (XDMarComs)</a>
-  <ul class="collapse">
-  <li><a href="#master-the-future-of-marketing" id="toc-master-the-future-of-marketing" class="nav-link" data-scroll-target="#master-the-future-of-marketing">Master the Future of Marketing</a></li>
-  <li><a href="#key-features-of-our-programme" id="toc-key-features-of-our-programme" class="nav-link" data-scroll-target="#key-features-of-our-programme">Key Features of Our Programme</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 <style>
-.center {
-  text-align: center;
+
+body {
+  overflow-x: hidden;
 }
 
-.logo {
-  width: 300px;
-  border-radius: 30px;
-  display: block;
-  margin: 0 auto;
+.hero-section {
+  background: url('images/your_background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  color: white;
+  position: relative;
 }
 
-.flex-container {
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 60%;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.apply-button {
+  padding: 15px 30px;
+  background-color: #005aa7;
+  color: white;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hero-cut-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.hero-logo-bottom img {
+  max-width: 300px;
+  height: auto;
+}
+
+.hero-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  gap: 2rem;
 }
 
-.text {
-  width: 70%;
-  text-align: justify;
+.hero-logo-side {
+  max-height: 200px;
+  width: auto;
 }
 
-.side-image {
-  width: 200px;
-  border-radius: 10px;
-  margin-left: 30px;
+.hero-section {
+  background-image: url('images/your-background.jpg'); /* άλλαξε με το δικό σου path */
+  background-size: cover; /* Ή βάλε 'contain' αν θες καθόλου ζουμ */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem;
+  color: white;
 }
 
-.footer {
-  text-align: center;
-  font-size: 0.9em;
-  margin-top: 30px;
-  color: #777;
-  
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer a {
-  color: #16537e;
-  text-decoration: none;
+.hero-content {
+  text-align: left; /* 👉 Αριστερή στοίχιση */
+  max-width: 600px;
 }
 
-h2, h3 {
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
-p {
-  text-align: justify;
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
-.blue-title {
-  color: #16537e;
+
+
+
+
+/* Αφαιρεί κενά και γραμμές */
+.navbar, .quarto-navbar {
+  width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  border-radius: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
+
+.navbar, .quarto-navbar {
+  background-color:#2f4154
+}
+
+
+/* Αφαιρεί τυχόν περιθώριο από το στοιχείο κάτω από το navbar */
+main, .page-columns, .content, .hero-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Επίσης μηδενίζει margin από το πρώτο heading, αν υπάρχει */
+.hero-title {
+  margin-top: 0 !important;
+}
+
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("images/hero-background.jpg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* <-- Κάνει το trick */
+  padding-left: 4rem; /* <-- περιθώριο για να μην κολλάει στην άκρη */
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 800px;
+  padding: 2rem;
+  color: white;
+  z-index: 2;
+  position: relative;
+  margin: 0; /* αφαιρεί το auto που το κεντράρει */
+}
+
+
+
+.hero-section2 {
+  height: 40vh !important;
+}
+
+.hero-section3 {
+  height: 50vh !important;
+}
+
+.hero-section4 {
+  height: 70vh !important;
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 800px;
+  padding: 2rem;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: white; 
+  text-align:left;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: white; 
+  text-align: left;
+}
+
+
+.apply-button:hover {
+  background-color: #2f4f4f;
+}
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 60px;
+  z-index: 2;
+}
+
+.hero-section2, .hero-section3, .hero-section4 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image1, .image2, .image3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-section2 .hero-content,
+.hero-section3 .hero-content,
+.hero-section4 .hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.5); /* σκοτεινό φόντο για να φαίνεται το κείμενο */
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: calc(100vh - 60px); /* 60px is height of footer */
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-footer {
+  background-color: #2f4154;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+  height: 60px;
+  line-height: 38px; /* to vertically center text */
+}
+
+.custom-footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.custom-footer a:hover {
+  text-decoration: underline;
+}
+
+.hero-section2 .hero-title,
+.hero-section3 .hero-title,
+.hero-section4 .hero-title {
+  font-size: 1.6rem;
+}
+
+.hero-section2 .hero-subtitle,
+.hero-section3 .hero-subtitle,
+.hero-section4 .hero-subtitle {
+  font-size: 0.99rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align:justify;
+}
+
+
 </style>
-<section id="msc-in-experiential-digital-marketing-communications-xdmarcoms" class="level1 center">
-<h1 class="center">MSc in Experiential Digital Marketing Communications (XDMarComs)</h1>
-<div class="center">
-<p><img src="images/final_logo.png" class="logo"></p>
+<div class="hero-section">
+<img src="images/cutlogoo.png" alt="University Logo" class="logo">
+<div class="hero-content-wrapper">
+<div class="hero-content">
+<h1 class="hero-title">
+MSc Experiential<br>and Digital Marketing<br>Communications
+</h1>
+<p class="hero-subtitle">
+Department of Communication and Marketing<br> Cyprus University of Technology
+</p>
+<p><a href="./tab4.html" class="apply-button">APPLY NOW</a></p>
 </div>
-<section id="master-the-future-of-marketing" class="level2 center">
-<h2 class="center anchored" data-anchor-id="master-the-future-of-marketing">Master the Future of Marketing</h2>
-<hr>
-<div class="flex-container">
-<div class="text">
-<p><strong>Purpose:</strong><br>
-To empower ambitious students and professionals to master digital storytelling, navigate the data-driven marketing landscape, and lead brands in delivering meaningful, memorable experiences to the connected consumer.</p>
-</div>
-<div>
-<p><img src="images/pic1.jpg" class="side-image"></p>
+<p><img src="images/final_logo.png" class="hero-logo-side" alt="Programme Logo"></p>
 </div>
 </div>
-<hr>
-<div class="flex-container">
-<div class="text">
-<p><strong>Mission:</strong><br>
-To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.</p>
-<p><strong>We empower our students with:</strong></p>
-<ul>
-<li>Advanced skills in AI, data analytics, IoT, and phygital marketing<br>
+<div class="hero-section2">
+<img src="images/pic1.jpg" alt="image1" class="image1" loading="lazy">
+<div class="hero-content">
+<h1 class="hero-title">
+Purpose
+</h1>
+<p class="hero-subtitle">
+To empower ambitious students and professionals to master digital storytelling, navigate the data-driven marketing landscape, and lead brands in delivering meaningful, memorable experiences to the connected consumer.
+</p>
+</div>
+</div>
+<div class="hero-section3">
+<img src="images/pic2.jpg" alt="image2" class="image2" loading="lazy">
+<div class="hero-content">
+<h1 class="hero-title">
+Mission
+</h1>
+<p class="hero-subtitle">
+To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
+</p><ul class="hero-subtitle">
+<li>
+Advanced skills in AI, data analytics, IoT, and phygital marketing
 </li>
-<li>Essential soft skills such as adaptability, agility, resilience, and collaboration<br>
+<li>
+Essential soft skills such as adaptability, agility, resilience, and collaboration
 </li>
-<li>The capacity to create sustainable value in an ever-evolving digital landscape</li>
+<li>
+The capacity to create sustainable value in an ever-evolving digital landscape
+</li>
 </ul>
-</div>
-<div>
-<p><img src="images/pic2.jpg" class="side-image"></p>
+<p></p>
 </div>
 </div>
-</section>
-<section id="key-features-of-our-programme" class="level2">
-<h2 class="anchored" data-anchor-id="key-features-of-our-programme">Key Features of Our Programme</h2>
-<h3 class="blue-title anchored">
+<div class="hero-section4">
+<img src="images/pic3.jpg" alt="image3" class="image3" loading="lazy">
+<div class="hero-content">
+<h1 class="hero-title">
+Key Features of Our Programme
+</h1>
+<p class="hero-subtitle">
+To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
+</p><ul class="hero-subtitle">
+<li>
 Flexible Delivery Structure
-</h3>
-<p>XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.</p>
-<h3 class="blue-title anchored">
+</li>
+<ul>
+XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.
+</ul>
+<li>
 Integrated Cross-Disciplinary Framework
-</h3>
-<p>Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.</p>
-<h3 class="blue-title anchored">
+</li>
+<ul>
+Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.
+</ul>
+<li>
 Continuous Professional Development
-</h3>
-<p>Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.</p>
-<hr>
-<div class="footer">
-<p>© 2025 xdmarcoms. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</li>
+<ul>
+Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.
+</ul>
+</ul>
+<p></p>
 </div>
+</div>
+<footer class="custom-footer">
+<p>
+© 2025 xdmarcoms. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</p>
+</footer>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
