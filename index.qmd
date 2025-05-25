@@ -1,3 +1,4 @@
+---
 page-layout: custom
 search: false
 format:
@@ -354,11 +355,11 @@ Mission
 </h1>
 <p class="hero-subtitle">
 To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
-    <ul class="hero-subtitle">
-      <li>Advanced skills in AI, data analytics, IoT, and phygital marketing</li>
-      <li>Essential soft skills such as adaptability, agility, resilience, and collaboration</li>
-      <li>The capacity to create sustainable value in an ever-evolving digital landscape</li>
-    </ul>
+<ul class="hero-subtitle">
+<li>Advanced skills in AI, data analytics, IoT, and phygital marketing</li>
+<li>Essential soft skills such as adaptability, agility, resilience, and collaboration</li>
+<li>The capacity to create sustainable value in an ever-evolving digital landscape</li>
+</ul>
 </p>
 </div>
 </div>
@@ -371,22 +372,22 @@ Key Features of Our Programme
 </h1>
 <p class="hero-subtitle">
 To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
-    <ul class="hero-subtitle">
-      <li>Flexible Delivery Structure</li>
-        <ul>XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.</ul>
-      <li>Integrated Cross-Disciplinary Framework</li>
-        <ul>Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.</ul>
-      <li>Continuous Professional Development</li>
-        <ul>Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.</ul>
-    </ul>
+<ul class="hero-subtitle">
+<li>Flexible Delivery Structure</li>
+<ul>XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.</ul>
+<li>Integrated Cross-Disciplinary Framework</li>
+<ul>Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.</ul>
+<li>Continuous Professional Development</li>
+ <ul>Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.</ul>
+</ul>
 </p>
 </div>
 </div>
 
 <footer class="custom-footer">
-  <p>
-    © 2025 xdmarcoms. All rights reserved. |
-    <a href="#">Privacy Policy</a> |
-    <a href="#">Terms of Service</a>
-  </p>
+<p>
+© 2025 xdmarcoms. All rights reserved. |
+<a href="#">Privacy Policy</a> |
+<a href="#">Terms of Service</a>
+</p>
 </footer>
