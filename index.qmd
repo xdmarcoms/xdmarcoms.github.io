@@ -8,230 +8,243 @@ format:
 
 <style>
 
+/* ===== GENERAL RESET ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  overflow-x: hidden;
+  margin: 0; /* Αφαιρεί προεπιλεγμένα περιθώρια του body */
+  font-family: Arial, sans-serif; /* Ορίζει τη γραμματοσειρά */
+  background-color: #f4f4f4; /* Θέτει ένα απαλό γκρι χρώμα φόντου */
+  color: #333; /* Σκούρο γκρι για το χρώμα του κειμένου */
 }
 
-.hero-section {
-  background: url('images/your_background.jpg') no-repeat center center;
-  background-size: cover;
+a {
+  text-decoration: none; /* Αφαιρεί την υπογράμμιση από τα links */
+  color: inherit; /* Τα links παίρνουν το ίδιο χρώμα με το περιβάλλον κείμενο */
+}
+
+img {
+  max-width: 100%; /* Δεν αφήνει τις εικόνες να ξεπερνούν το πλάτος του container */
+  height: auto; /* Διατηρεί την αναλογία διαστάσεων της εικόνας */
+  display: block; /* Αφαιρεί κενά κάτω από εικόνες (σε inline context) */
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex; /* Χρήση flexbox για στοίχιση */
+  align-items: center; /* Κάθετη στοίχιση στο κέντρο */
+  justify-content: space-between; /* Κενό ανάμεσα σε αριστερά και δεξιά στοιχεία */
+  background-color: #1d2e3f; /* Σκούρο μπλε φόντο */
+  padding: 1rem 2rem; /* Εσωτερικό padding γύρω από τη navbar */
+  color: white; /* Χρώμα κειμένου */
+}
+
+.navbar-left {
+  display: flex; /* Flex για στοίχιση logo και τίτλου */
+  align-items: center; /* Κάθετη στοίχιση */
+  gap: 0.5rem; /* Κενό μεταξύ στοιχείων */
+}
+
+.navbar-left img {
+  width: 30px; /* Σταθερό πλάτος εικόνας */
+  height: 30px; /* Σταθερό ύψος εικόνας */
+}
+
+.navbar-left span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar-right {
+  display: flex; /* Flex για οριζόντια διάταξη */
+  gap: 1.5rem; /* Απόσταση ανάμεσα στα links */
+}
+
+.navbar-right a {
+  color: white; /* Χρώμα link */
+  font-size: 1rem; /* Μέγεθος γραμματοσειράς */
+}
+
+.navbar-right a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero-wrapper {
+  position: relative;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 60px;
-  color: white;
-  position: relative;
-}
-
-.hero-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-text {
-  max-width: 60%;
-}
-
-.hero-text h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.apply-button {
-  padding: 15px 30px;
-  background-color: #005aa7;
-  color: white;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.hero-cut-logo img {
-  max-width: 150px;
-  height: auto;
-}
-
-.hero-logo-bottom {
-  position: left center;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero-logo-bottom img {
-  max-width: 300px;
-  height: auto;
-}
-
-.hero-content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.hero-logo-side {
-  max-height: 200px;
-  width: auto;
-}
-
-.hero-section {
-  background-image: url('images/your-background.jpg'); /* άλλαξε με το δικό σου path */
-  background-size: cover; /* Ή βάλε 'contain' αν θες καθόλου ζουμ */
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 6rem 2rem;
-  color: white;
-}
-
-.hero-content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero-content {
-  text-align: left; /* 👉 Αριστερή στοίχιση */
-  max-width: 600px;
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-
-
-
-
-/* Αφαιρεί κενά και γραμμές */
-.navbar, .quarto-navbar {
-  width: 100vw !important;
-  left: 0 !important;
-  right: 0 !important;
-  margin: 0 auto !important;
-  border-radius: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.navbar, .quarto-navbar {
-  background-color:#2f4154
-}
-
-
-/* Αφαιρεί τυχόν περιθώριο από το στοιχείο κάτω από το navbar */
-main, .page-columns, .content, .hero-section {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* Επίσης μηδενίζει margin από το πρώτο heading, αν υπάρχει */
-.hero-title {
-  margin-top: 0 !important;
-}
-
-.hero-section {
-  position: relative;
-  width: 100vw;
-  height: 80vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("images/hero-background.jpg") center center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* <-- Κάνει το trick */
-  padding-left: 4rem; /* <-- περιθώριο για να μην κολλάει στην άκρη */
   overflow: hidden;
 }
 
-.hero-content {
-  text-align: left;
-  max-width: 800px;
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+  transform: scale(1.05);
+}
+
+.hero {
+  display: flex;
+  height: 100vh;
   padding: 2rem;
-  color: white;
-  z-index: 2;
   position: relative;
-  margin: 0; /* αφαιρεί το auto που το κεντράρει */
+  z-index: 1;
+}
+
+.hero-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 3.5rem;
+}
+
+.hero-left h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.apply-button {
+  background-color: #16537e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.hero-right {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-wrapper img {
+  max-height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
 
 
 
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 4rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1d2e3f;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1d2e3f;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-right {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .hero-left {
+    align-items: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .hero-right img {
+    height: auto;
+    width: auto;
+}
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* ===== OTHER HERO SECTIONS ===== */
 .hero-section2 {
-  height: 40vh !important;
+  position: relative;
+  height: 45vh;
+  overflow: hidden;
 }
 
 .hero-section3 {
-  height: 50vh !important;
+  position: relative;
+  height: 55vh;
+  overflow: hidden;
 }
 
 .hero-section4 {
-  height: 70vh !important;
-}
-
-.hero-content {
-  text-align: left;
-  max-width: 800px;
-  padding: 2rem;
-  color: white;
-  z-index: 2;
   position: relative;
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  color: white; 
-  text-align:left;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
-  color: white; 
-  text-align: left;
-}
-
-
-.apply-button:hover {
-  background-color: #2f4f4f;
-}
-
-.logo {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  height: 60px;
-  z-index: 2;
-}
-
-.hero-section2, .hero-section3, .hero-section4 {
-  position: relative;
-  height: 100vh;
+  height: 85vh;
   overflow: hidden;
 }
 
@@ -253,20 +266,32 @@ main, .page-columns, .content, .hero-section {
   color: white;
   padding: 2rem;
   max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.5); /* σκοτεινό φόντο για να φαίνεται το κείμενο */
+  background-color: rgba(0, 0, 0, 0.5);
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
+  text-align: justify;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.hero-section2 .hero-title,
+.hero-section3 .hero-title,
+.hero-section4 .hero-title {
+  font-size: 1.6rem;
+  text-align: left;
 }
 
+.hero-section2 .hero-subtitle,
+.hero-section3 .hero-subtitle,
+.hero-section4 .hero-subtitle {
+  font-size: 0.99rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* ===== FOOTER FIXED ===== */
 .page-wrapper {
-  min-height: calc(100vh - 60px); /* 60px is height of footer */
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
 }
@@ -278,7 +303,7 @@ html, body {
   padding: 1rem 1rem;
   font-size: 0.9rem;
   height: 60px;
-  line-height: 38px; /* to vertically center text */
+  line-height: 38px;
 }
 
 .custom-footer a {
@@ -291,68 +316,72 @@ html, body {
   text-decoration: underline;
 }
 
-.hero-section2 .hero-title,
-.hero-section3 .hero-title,
-.hero-section4 .hero-title {
-  font-size: 1.6rem;
+.logo-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero-section2 .hero-subtitle,
-.hero-section3 .hero-subtitle,
-.hero-section4 .hero-subtitle {
-  font-size: 0.99rem;
-  font-weight: 400;
-  line-height: 1;
-  text-align:justify;
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+.activities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Απόσταση ανάμεσα στις κάρτες */
+  justify-content: center;
+  padding: 2rem;
+}
+
+.activity-box {
+  flex: 1 1 calc(50% - 12px);
+  max-width: calc(50% - 12px);
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
 
 </style>
 
 
-<div class="hero-section">
-<img src="images/cutlogoo.png" alt="University Logo" class="logo" />
-<div class="hero-content-wrapper">
-<div class="hero-content">
-<h1 class="hero-title">
-MSc Experiential<br>and Digital Marketing<br>Communications
-</h1>
-<p class="hero-subtitle">
+<!-- ===== HERO SECTION ===== -->
+<div class="hero-wrapper">
+<div class="hero">
+<div class="hero-left">
+<h1>MSc Experiential<br>and Digital Marketing<br>Communications</h1>
+<p>
 Department of Communication and Marketing<br>
 Cyprus University of Technology
 </p>
 <a href="tab4.qmd" class="apply-button">APPLY NOW</a>
 </div>
-<img src="images/final_logo.png" class="hero-logo-side" alt="Programme Logo" />
+<div class="hero-right">
+<img src="images/final_logo.png" alt="Programme Logo">
 </div>
 </div>
-
-
-<div class="hero-logo-bottom">
-<img src="images/final_logo.png" alt="XDMarComs Logo">
 </div>
-</section>
 
-
-
+<!-- ===== SECTION 1 ===== -->
 <div class="hero-section2">
 <img src="images/pic1.jpg" alt="image1" class="image1" loading="lazy"/>
 <div class="hero-content">
-<h1 class="hero-title">
-Purpose
-</h1>
+<h1 class="hero-title">Purpose</h1>
 <p class="hero-subtitle">
 To empower ambitious students and professionals to master digital storytelling, navigate the data-driven marketing landscape, and lead brands in delivering meaningful, memorable experiences to the connected consumer.
 </p>
 </div>
 </div>
 
+<!-- ===== SECTION 2 ===== -->
 <div class="hero-section3">
 <img src="images/pic2.jpg" alt="image2" class="image2" loading="lazy"/>
 <div class="hero-content">
-<h1 class="hero-title">
-Mission
-</h1>
+<h1 class="hero-title">Mission</h1>
 <p class="hero-subtitle">
 To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
 <ul class="hero-subtitle">
@@ -364,29 +393,32 @@ To foster a student-centric, innovation-driven learning environment where indivi
 </div>
 </div>
 
+<!-- ===== SECTION 3 ===== -->
 <div class="hero-section4">
-<img src="images/pic3.jpg" alt="image3" class="image3" loading="lazy"/>
+ <img src="images/pic3.jpg" alt="image3" class="image3" loading="lazy"/>
 <div class="hero-content">
-<h1 class="hero-title">
-Key Features of Our Programme
-</h1>
+<h1 class="hero-title">Key Features of Our Programme</h1>
 <p class="hero-subtitle">
 To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
 <ul class="hero-subtitle">
-<li>Flexible Delivery Structure</li>
+<li>Flexible Delivery Structure
 <ul>XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.</ul>
-<li>Integrated Cross-Disciplinary Framework</li>
+</li>
+<li>Integrated Cross-Disciplinary Framework
 <ul>Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.</ul>
-<li>Continuous Professional Development</li>
- <ul>Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.</ul>
+</li>
+<li>Continuous Professional Development
+<ul>Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.</ul>
+</li>
 </ul>
 </p>
 </div>
 </div>
 
+<!-- ===== FOOTER ===== -->
 <footer class="custom-footer">
 <p>
-© 2025 xdmarcoms. All rights reserved. |
+© 2025 XDMARCOMS. All rights reserved. |
 <a href="#">Privacy Policy</a> |
 <a href="#">Terms of Service</a>
 </p>

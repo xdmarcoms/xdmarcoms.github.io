@@ -6,8 +6,10 @@ format: html
 
 <style>
   a {
-    color: #16537e;
-  }
+    color: #16537e;  }
+  
+  body {
+  font-family: 'Arial', sans-serif; }
 </style>
 
 

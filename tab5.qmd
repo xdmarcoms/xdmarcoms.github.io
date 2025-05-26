@@ -6,174 +6,138 @@ output:
     theme: flatly
 ---
 
-```{r, echo=FALSE, results='asis'}
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+  color: #222;
+}
 
+/* Κεντρική ενότητα */
+.activity-section {
+  width: 100%;
+  padding: 40px 30px; /* λιγότερο padding */
+  box-sizing: border-box;
+}
+
+.activity-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5a4fcf;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* μικρότερο κενό */
+  justify-content: center;
+  max-width: 100%; /* πλήρες πλάτος */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.activity-box {
+  flex: 1 1 calc(49% - 10px);
+  max-width: calc(49% - 10px);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Εικόνες */
+.activity-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Αριθμός */
+.activity-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Τίτλος */
+.activity-heading {
+  font-weight: bold;
+  color: #16537e;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Περιγραφή */
+.activity-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .activity-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
+
+```{r, echo=FALSE, results='asis'}
 library(htmltools)
 
-# Swiper.js & CSS
-external_assets <- "
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'/>
-<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
-"
-
-# Custom CSS για το layout
-css <- "
-<style>
-  body { font-family: 'Arial', sans-serif; margin: 40px; }
-
-  .activity-section {
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .activity-subtitle {
-    font-size: 20px;
-    color: #5a4fcf;
-    margin-bottom: 40px;
-  }
-
-  .activities {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-
-  .activity-box {
-    flex: 1;
-    min-width: 280px;
-  }
-
-  .activity-number {
-    font-size: 20px;
-    font-weight: bold;
-    color: lightgray;
-  }
-
-  .swiper {
-  width: 100%;
-  height: 200px;  /* αυξάνεις ή μειώνεις ανάλογα */
-  margin: 10px 0;
-  border-radius: 6px;
-  overflow: hidden;
-  }
-
-  .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-
-  .swiper-button-next, .swiper-button-prev {
-    color: #5a4fcf;
-  }
-
-  .activity-heading {
-    font-weight: bold;
-    color: #3a2fd4;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  .activity-description {
-    font-size: 17px;
-    color: #333;
-  }
-</style>
-"
-
-# Swiper init script
-swiper_script <- "
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.swiper').forEach(function(el) {
-    new Swiper(el, {
-      navigation: {
-        nextEl: el.querySelector('.swiper-button-next'),
-        prevEl: el.querySelector('.swiper-button-prev'),
-      },
-      loop: true,
-    });
-  });
-});
-</script>
-"
-
-# Activities data
+# Δεδομένα χωρίς swiper
 activities <- list(
   list(
     number = "01 Lobbying and Public Affairs in Cyprus",
-    img = list("images/a1.jpg", "images/a2.jpg", "images/a3.jpg", "images/a4.jpg"),
+    img = "images/a1.jpg",
     title = "Presented by Mairy Pyrgou, MSc<br>Public Affairs Consultant, President of Fimonoi",
     description = "This presentation took place as part of the Reputation and Media Management course, focusing on the role of lobbying in influencing government decisions and shaping public perception in Cyprus."
   ),
   list(
     number = "02 Shaping the Wine Tourism Identity & Image of Cyprus: Theoretical and Practical Approaches",
-    img = list("images/b1.jpg", "images/b2.jpg", "images/b3.jpg", "images/b4.jpg", "images/b5.jpg", "images/b6.jpg", "images/b7.jpg", "images/b8.jpg", "images/b9.jpg", "images/b10.jpg", "images/b11.jpg"),
-    title = "Keynote speakers: Dr. Maria Alempaki – Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA
-Elina Christofidou – Tourism Officer, Deputy Ministry of Tourism of Cyprus
-Ilias Makridis – Operations Coordinator, Cyprus Wine Core
-Michalis Georgiou – Wine Journalist",
+    img = "images/b1.jpg",
+    title = "Keynote speakers: Dr. Maria Alempaki – Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA<br>Elina Christofidou – Tourism Officer, Deputy Ministry of Tourism of Cyprus<br>Ilias Makridis – Operations Coordinator, Cyprus Wine Core<br>Michalis Georgiou – Wine Journalist",
     description = "As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar—organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr. Maria Alempaki—examines wine tourism identity and digital branding in Cyprus. Experts from tourism, wine journalism, and agricultural economics will share insights and strategies to enhance Cyprus’s image as a wine tourism destination."
   ),
   list(
     number = "03",
-    img = list("images/c1.jpg", "images/c2.jpg", "images/c3.jpg", "images/c4.jpg"),
-    title = "Summit Awarding",
-    description = "Awarding and recognition of excellence in education"
+    img = "images/c1.jpg",
+    title = "Intercultural Communication<br>Marcoms in Slovakia, Presented by Lucia Dancisinova, Eva Benkova",
+    description = "A session on Intercultural Communication, Presentation and Communication Skills – Marcoms in Slovakia was delivered by Lucia Dančišinová and Eva Beňková. The presentation focused on their university in Slovakia and introduced a postgraduate program similar to our Master’s in Marketing Communications. The session offered insights into their academic approach and the structure of Marcoms education in a different cultural context."
   ),
   list(
     number = "04",
-    img = list("images/c1.jpg", "images/c2.jpg", "images/c3.jpg", "images/c4.jpg"),
-    title = "Summit Awarding",
-    description = "Awarding and recognition of excellence in education"
-  ),
-  list(
-    number = "05",
-    img = list("images/c1.jpg", "images/c2.jpg", "images/c3.jpg", "images/c4.jpg"),
-    title = "Summit Awarding",
-    description = "Awarding and recognition of excellence in education"
+    img = "images/d1.jpg",
+    title = "The Marketing and Media landscapes of India, Presented by Geeta Marmaat",
+    description = "A session on The Marketing and Media Landscapes of India and Brand Communications in the Indian Context was delivered by Geeta Marmaat, offering insights into communication strategies within the Indian market. The collaboration also included a visit to their university in India, further enhancing the international scope of the program."
   )
 )
 
-# Render
+# Δημιουργία περιεχομένου
 htmltools::browsable(
   tagList(
-    HTML(external_assets),
-    HTML(css),
     div(class = "activity-section",
-        div(class = "activity-subtitle", "Elevate Education"),
         div(class = "activities",
-            lapply(seq_along(activities), function(i) {
-              act <- activities[[i]]
-              
-              # Carousel if multiple images
-              img_tag <- if (is.list(act$img)) {
-                div(class = "swiper",
-                    div(class = "swiper-wrapper",
-                        lapply(act$img, function(img_src) {
-                          div(class = "swiper-slide",
-                              img(src = img_src)
-                          )
-                        })
-                    ),
-                    div(class = "swiper-button-next"),
-                    div(class = "swiper-button-prev")
-                )
-              } else {
-                img(src = act$img, class = "activity-image")
-              }
-              
+            lapply(activities, function(act) {
               div(class = "activity-box",
                   div(class = "activity-number", act$number),
-                  img_tag,
+                  img(src = act$img),
                   div(class = "activity-heading", HTML(act$title)),
                   div(class = "activity-description", act$description)
               )
             })
         )
-    ),
-    HTML(swiper_script)
+    )
   )
 )
 ```
