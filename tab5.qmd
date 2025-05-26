@@ -6,6 +6,7 @@ output:
     theme: flatly
 ---
 
+<!-- Custom CSS -->
 <style>
 body {
   font-family: 'Arial', sans-serif;
@@ -16,10 +17,9 @@ body {
   color: #222;
 }
 
-/* Κεντρική ενότητα */
 .activity-section {
   width: 100%;
-  padding: 40px 30px; /* λιγότερο padding */
+  padding: 60px;
   box-sizing: border-box;
 }
 
@@ -34,24 +34,23 @@ body {
 .activities {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* μικρότερο κενό */
+  gap: 20px;
   justify-content: center;
-  max-width: 100%; /* πλήρες πλάτος */
+  max-width: 95%;
   margin: 0 auto;
   padding: 0;
 }
 
 .activity-box {
-  flex: 1 1 calc(49% - 10px);
-  max-width: calc(49% - 10px);
+  flex: 1 1 calc(50% - 30px);
+  max-width: calc(50% - 30px);
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 24px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-/* Εικόνες */
 .activity-box img {
   width: 100%;
   height: auto;
@@ -59,7 +58,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Αριθμός */
 .activity-number {
   font-size: 16px;
   font-weight: bold;
@@ -67,7 +65,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Τίτλος */
 .activity-heading {
   font-weight: bold;
   color: #16537e;
@@ -75,14 +72,31 @@ body {
   margin-bottom: 10px;
 }
 
-/* Περιγραφή */
 .activity-description {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
 }
 
-/* Responsive */
+.swiper {
+  width: 100%;
+  height: 280px;
+  margin: 15px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #5a4fcf;
+}
+
 @media (max-width: 768px) {
   .activity-box {
     flex: 1 1 100%;
@@ -91,53 +105,94 @@ body {
 }
 </style>
 
-
 ```{r, echo=FALSE, results='asis'}
+# Load required package
 library(htmltools)
 
-# Δεδομένα χωρίς swiper
+# Swiper assets
+external_assets <- "
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'/>
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+"
+
+# Swiper init script
+swiper_script <- "
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.swiper').forEach(function(el) {
+    new Swiper(el, {
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
+      loop: true,
+    });
+  });
+});
+</script>
+"
+
+# Activities data
 activities <- list(
   list(
     number = "01 Lobbying and Public Affairs in Cyprus",
-    img = "images/a1.jpg",
+    img = list("images/a1.jpg", "images/a2.jpg", "images/a3.jpg", "images/a4.jpg"),
     title = "Presented by Mairy Pyrgou, MSc<br>Public Affairs Consultant, President of Fimonoi",
     description = "This presentation took place as part of the Reputation and Media Management course, focusing on the role of lobbying in influencing government decisions and shaping public perception in Cyprus."
   ),
   list(
     number = "02 Shaping the Wine Tourism Identity & Image of Cyprus: Theoretical and Practical Approaches",
-    img = "images/b1.jpg",
+    img = list("images/b1.jpg", "images/b2.jpg", "images/b3.jpg", "images/b4.jpg", "images/b5.jpg", "images/b6.jpg", "images/b7.jpg", "images/b8.jpg", "images/b9.jpg", "images/b10.jpg", "images/b11.jpg"),
     title = "Keynote speakers: Dr. Maria Alempaki – Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA<br>Elina Christofidou – Tourism Officer, Deputy Ministry of Tourism of Cyprus<br>Ilias Makridis – Operations Coordinator, Cyprus Wine Core<br>Michalis Georgiou – Wine Journalist",
-    description = "As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar—organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr. Maria Alempaki—examines wine tourism identity and digital branding in Cyprus. Experts from tourism, wine journalism, and agricultural economics will share insights and strategies to enhance Cyprus’s image as a wine tourism destination."
+    description = "As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar—organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr. Maria Alempaki—examines wine tourism identity and digital branding in Cyprus."
   ),
   list(
     number = "03",
-    img = "images/c1.jpg",
+    img = list("images/c1.jpg", "images/c2.jpg", "images/c3.jpg", "images/c4.jpg"),
     title = "Intercultural Communication<br>Marcoms in Slovakia, Presented by Lucia Dancisinova, Eva Benkova",
-    description = "A session on Intercultural Communication, Presentation and Communication Skills – Marcoms in Slovakia was delivered by Lucia Dančišinová and Eva Beňková. The presentation focused on their university in Slovakia and introduced a postgraduate program similar to our Master’s in Marketing Communications. The session offered insights into their academic approach and the structure of Marcoms education in a different cultural context."
+    description = "A session on Intercultural Communication, Presentation and Communication Skills – Marcoms in Slovakia was delivered by Lucia Dančišinová and Eva Beňková. The presentation introduced a postgraduate program similar to our Master’s in Marketing Communications."
   ),
   list(
     number = "04",
-    img = "images/d1.jpg",
+    img = list("images/d1.jpg", "images/d2.jpg", "images/d3.jpg", "images/d4.jpg"),
     title = "The Marketing and Media landscapes of India, Presented by Geeta Marmaat",
-    description = "A session on The Marketing and Media Landscapes of India and Brand Communications in the Indian Context was delivered by Geeta Marmaat, offering insights into communication strategies within the Indian market. The collaboration also included a visit to their university in India, further enhancing the international scope of the program."
+    description = "This session focused on Indian communication strategies. A visit to their university further enhanced the international scope of the program."
   )
 )
 
-# Δημιουργία περιεχομένου
+# Render HTML
 htmltools::browsable(
   tagList(
+    HTML(external_assets),
     div(class = "activity-section",
         div(class = "activities",
-            lapply(activities, function(act) {
+            lapply(seq_along(activities), function(i) {
+              act <- activities[[i]]
+              img_tag <- if (is.list(act$img)) {
+                div(class = "swiper",
+                    div(class = "swiper-wrapper",
+                        lapply(act$img, function(img_src) {
+                          div(class = "swiper-slide",
+                              img(src = img_src)
+                          )
+                        })
+                    ),
+                    div(class = "swiper-button-next"),
+                    div(class = "swiper-button-prev")
+                )
+              } else {
+                img(src = act$img, class = "activity-image")
+              }
               div(class = "activity-box",
                   div(class = "activity-number", act$number),
-                  img(src = act$img),
+                  img_tag,
                   div(class = "activity-heading", HTML(act$title)),
                   div(class = "activity-description", act$description)
               )
             })
         )
-    )
+    ),
+    HTML(swiper_script)
   )
 )
 ```
