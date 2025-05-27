@@ -251,6 +251,17 @@ img {
   margin-top: 0.5rem;
 }
 
+.news-button {
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
 .hero-right {
   flex: 1;
   display: flex;
@@ -375,10 +386,33 @@ img {
 }
 
 /* ===== ACTIVITY SECTION ===== */
+.activity-section h2 {
+  color: white;
+}
+
 .activity-section {
-  background-color: #f8f8f8;
+  position: relative;
   padding: 3rem 1.5rem;
+  color: black;
   text-align: center;
+  background-image: url("images/pic3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.activity-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* σκοτεινή επικάλυψη για να ξεχωρίζει το κείμενο */
+  z-index: 0;
+}
+
+.activity-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .activity-subtitle {
@@ -389,9 +423,9 @@ img {
 }
 
 .activities {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
   max-width: 1000px;
   margin: auto;
 }
@@ -594,11 +628,8 @@ Key Features of Our Programme
 </div>
 </div>
 <!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
-<!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
 <div class="activity-section">
-<h2 class="activity-subtitle">
-News and Events
-</h2>
+<a href="./tab5.html" class="news-button">News and Events</a>
 <div class="activities">
 <!-- First Activity -->
 <div class="activity-box">
@@ -628,7 +659,7 @@ News and Events
 </div>
 </div>
 <div class="activity-heading">
-Presented by Mairy Pyrgou, MSc<br>Public Affairs Consultant, President of Fimonoi
+Presented by Mairy Pyrgou<br>MSc Public Affairs Consultant, President of Fimonoi
 </div>
 <div class="activity-description">
 <p>This presentation took place as part of the Reputation and Media Management course, focusing on the role of lobbying in influencing government decisions and shaping public perception in Cyprus.</p>
@@ -683,10 +714,10 @@ Presented by Mairy Pyrgou, MSc<br>Public Affairs Consultant, President of Fimono
 </div>
 </div>
 <div class="activity-heading">
-<p>Keynote speakers: Dr.&nbsp;Maria Alempaki – Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA<br> Elina Christofidou – Tourism Officer, Deputy Ministry of Tourism of Cyprus<br> Ilias Makridis – Operations Coordinator, Cyprus Wine Core<br> Michalis Georgiou – Wine Journalist</p>
+<p>Keynote speakers: Dr.&nbsp;Maria Alempaki: Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA<br> Elina Christofidou: Tourism Officer, Deputy Ministry of Tourism of Cyprus<br> Ilias Makridis: Operations Coordinator, Cyprus Wine Core<br> Michalis Georgiou: Wine Journalist</p>
 </div>
 <div class="activity-description">
-<p>As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar—organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr.&nbsp;Maria Alempaki—examines wine tourism identity and digital branding in Cyprus.</p>
+<p>As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr.&nbsp;Maria Alempaki examines wine tourism identity and digital branding in Cyprus.</p>
 </div>
 </div>
 <!-- Third Activity -->
