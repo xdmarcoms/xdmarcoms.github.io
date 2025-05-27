@@ -16,8 +16,6 @@ website:
         text: Requirements
       - href: tab4.qmd
         text: Applications Process
-      - href: tab5.qmd
-        text: News and Events
     logo: images/cutlogoo.png
 format:
   html:

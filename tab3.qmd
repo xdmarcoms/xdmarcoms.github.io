@@ -9,6 +9,11 @@ p {
 
 body {
   font-family: 'Arial', sans-serif; }
+  
+  
+.gt_table_container {
+  overflow-x: auto;
+}
 </style>
 
 <p> The XDMarComs MSc is an elite program designed on the basis of state-of-the-art educational design principles and using teaching techniques which combine academic rigour with practical application. It provides a rich learning experience and advances the personal development and professional networking of participants by welcoming a diverse student body. It values both academic achievement and professional experience and provides a personalized learning environment, tailored to individual needs and aspirations. It offers a traditional, academic entry pathway and a professional one.

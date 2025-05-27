@@ -72,9 +72,37 @@ output: html_document
   h2 {
   font-size: 20px;  /* ή όσο μικρό θέλεις */
   }
+  
+  
+  
+  
+ @media (max-width: 768px) {
+  .member-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .member-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .member-description {
+    margin-left: 0;
+  }
+
+  .menu {
+    position: static;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+}
+
 </style>
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 ## Christiana Tsaousi {#christiana}
 ```{r, echo=FALSE, results='asis'}

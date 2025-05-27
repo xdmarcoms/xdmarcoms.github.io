@@ -434,6 +434,30 @@ footer {
     max-width: 100%;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .swiper {
+    height: 250px; /* Ή πιο δυναμικό: */
+    height: 50vw;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .logo-wrapper img {
+    max-height: 200px;
+    margin: 0 auto;
+  }
+}
 </style>
 
 <!-- ===== HERO SECTION ===== -->
