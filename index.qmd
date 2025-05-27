@@ -130,17 +130,6 @@ img {
   margin-top: 0.5rem;
 }
 
-.news-button {
-  color: white;
-  font-weight: bold;
-  padding: 0.8rem 1rem;
-  margin: 1rem 0;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
 .hero-right {
   flex: 1;
   display: flex;
@@ -434,30 +423,6 @@ footer {
     max-width: 100%;
   }
 }
-
-
-
-@media (max-width: 768px) {
-  .swiper {
-    height: 250px; /* Ή πιο δυναμικό: */
-    height: 50vw;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .logo-wrapper img {
-    max-height: 200px;
-    margin: 0 auto;
-  }
-}
 </style>
 
 <!-- ===== HERO SECTION ===== -->
@@ -513,8 +478,9 @@ To foster a student-centric, innovation-driven learning environment where indivi
 </div>
 
 <!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
+<!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
 <div class="activity-section">
-<a href="tab5.qmd" class="news-button">News and Events</a>
+<h2 class="activity-subtitle">News and Events</h2>
 <div class="activities">
 
 <!-- First Activity -->
