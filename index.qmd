@@ -6,6 +6,7 @@ format:
     toc: false
 ---
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <style>
 
 /* ===== GENERAL RESET ===== */
@@ -157,7 +158,7 @@ img {
 /* ===== DOUBLE SECTION ===== */
 .hero-double-section {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
   background-image: url("images/pic2.jpg");
   background-size: cover;
@@ -181,6 +182,7 @@ img {
   max-width: 800px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 1.5rem;
 }
 
 .hero-double-section .hero-content {
@@ -251,6 +253,88 @@ img {
   margin-bottom: 0.5rem;
 }
 
+/* ===== ACTIVITY SECTION ===== */
+.activity-section {
+  background-color: #f8f8f8;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.activity-subtitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #1d2e3f;
+}
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.activity-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #16537e;
+}
+
+.swiper {
+  width: 100%;
+  height: 500px; /* Σταθερό ύψος για όλα τα slides */
+  margin-bottom: 1rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%; /* Να γεμίζουν όλο το ύψος του slide */
+  object-fit: cover; /* Κόβει την εικόνα ώστε να μην παραμορφωθεί */
+  border-radius: 8px;
+  display: block;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #16537e;
+}
+
+.activity-heading {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .activity-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .activity-heading {
+    font-size: 0.95rem;
+  }
+
+  .activity-description {
+    font-size: 0.9rem;
+  }
+}
+
 /* ===== FOOTER ===== */
 footer {
   background-color: #1d2e3f;
@@ -310,6 +394,11 @@ footer {
     justify-content: center;
     gap: 1rem;
   }
+
+  .activity-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 </style>
 
@@ -318,10 +407,7 @@ footer {
 <div class="hero">
 <div class="hero-left">
 <h1>MSc Experiential<br>and Digital Marketing<br>Communications</h1>
-<p>
-Department of Communication and Marketing<br>
-Cyprus University of Technology
-</p>
+<p>Department of Communication and Marketing<br>Cyprus University of Technology</p>
 <a href="tab4.qmd" class="apply-button">APPLY NOW</a>
 </div>
 <div class="hero-right">
@@ -341,7 +427,6 @@ Cyprus University of Technology
 To empower ambitious students and professionals to master digital storytelling, navigate the data-driven marketing landscape, and lead brands in delivering meaningful, memorable experiences to the connected consumer.
 </p>
 </div>
-
 <div class="hero-content">
 <h1 class="hero-title">Mission</h1>
 <p class="hero-subtitle">
@@ -362,18 +447,133 @@ To foster a student-centric, innovation-driven learning environment where indivi
 <div class="hero-content">
 <h1 class="hero-title">Key Features of Our Programme</h1>
 <ul class="hero-subtitle">
-<li><strong>Flexible Learning</strong> Hybrid programme with intensive five-week modules combining weekend classes, online seminars, and self-paced content for working professionals.</li>
-<li><strong>Cross-Disciplinary Approach</strong> Integrates technology, psychology, analytics, design, and communication for strategic, well-rounded marketing expertise.</li>
-<li><strong>Continuous Growth</strong> Develops self-directed learning skills to help graduates adapt and thrive in evolving digital marketing landscapes.</li>
+<li><strong>Flexible Learning:</strong> Hybrid programme with intensive five-week modules combining weekend classes, online seminars, and self-paced content for working professionals.</li>
+<li><strong>Cross-Disciplinary Approach:</strong> Integrates technology, psychology, analytics, design, and communication for strategic, well-rounded marketing expertise.</li>
+<li><strong>Continuous Growth:</strong> Develops self-directed learning skills to help graduates adapt and thrive in evolving digital marketing landscapes.</li>
 </ul>
 </div>
 </div>
 
+<!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
+<!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
+<div class="activity-section">
+<h2 class="activity-subtitle">News and Events</h2>
+<div class="activities">
+
+<!-- First Activity -->
+<div class="activity-box">
+<div class="activity-number">01 Lobbying and Public Affairs in Cyprus</div>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="images/a1.jpg" alt="Image 1"></div>
+<div class="swiper-slide"><img src="images/a2.jpg" alt="Image 2"></div>
+<div class="swiper-slide"><img src="images/a3.jpg" alt="Image 3"></div>
+<div class="swiper-slide"><img src="images/a4.jpg" alt="Image 4"></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+<div class="activity-heading">Presented by Mairy Pyrgou, MSc<br>Public Affairs Consultant, President of Fimonoi</div>
+<div class="activity-description">
+This presentation took place as part of the Reputation and Media Management course, focusing on the role of lobbying in influencing government decisions and shaping public perception in Cyprus.
+</div>
+</div>
+
+<!-- Second Activity -->
+<div class="activity-box">
+<div class="activity-number">02 Shaping the Wine Tourism Identity & Image of Cyprus: Theoretical and Practical Approaches</div>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="images/b1.jpg" alt="Image 1"></div>
+<div class="swiper-slide"><img src="images/b2.jpg" alt="Image 2"></div>
+<div class="swiper-slide"><img src="images/b3.jpg" alt="Image 3"></div>
+<div class="swiper-slide"><img src="images/b4.jpg" alt="Image 4"></div>
+<div class="swiper-slide"><img src="images/b5.jpg" alt="Image 5"></div>
+<div class="swiper-slide"><img src="images/b6.jpg" alt="Image 6"></div>
+<div class="swiper-slide"><img src="images/b7.jpg" alt="Image 7"></div>
+<div class="swiper-slide"><img src="images/b8.jpg" alt="Image 8"></div>
+<div class="swiper-slide"><img src="images/b9.jpg" alt="Image 9"></div>
+<div class="swiper-slide"><img src="images/b10.jpg" alt="Image 10"></div>
+<div class="swiper-slide"><img src="images/b11.jpg" alt="Image 11"></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+<div class="activity-heading">
+Keynote speakers: Dr. Maria Alempaki – Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA<br>
+Elina Christofidou – Tourism Officer, Deputy Ministry of Tourism of Cyprus<br>
+Ilias Makridis – Operations Coordinator, Cyprus Wine Core<br>
+Michalis Georgiou – Wine Journalist
+</div>
+<div class="activity-description">
+As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar—organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr. Maria Alempaki—examines wine tourism identity and digital branding in Cyprus.
+</div>
+</div>
+
+
+<!-- Third Activity -->
+<div class="activity-box">
+<div class="activity-number">03 Intercultural Communication - Marcoms in Slovakia</div>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="images/c1.jpg" alt="Image 1"></div>
+<div class="swiper-slide"><img src="images/c2.jpg" alt="Image 2"></div>
+<div class="swiper-slide"><img src="images/c3.jpg" alt="Image 3"></div>
+<div class="swiper-slide"><img src="images/c4.jpg" alt="Image 4"></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+<div class="activity-heading">
+Presented by Lucia Dancisinova, Eva Benkova
+</div>
+<div class="activity-description">
+A session on Intercultural Communication, Presentation and Communication Skills – Marcoms in Slovakia was delivered by Lucia Dančišinová and Eva Beňková. The presentation introduced a postgraduate program similar to our Master’s in Marketing Communications.
+</div>
+</div>
+
+<!-- Fourth Activity -->
+<div class="activity-box">
+<div class="activity-number">04 The Marketing and Media landscapes of India</div>
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="images/d1.jpg" alt="Image 1"></div>
+<div class="swiper-slide"><img src="images/d2.jpg" alt="Image 2"></div>
+<div class="swiper-slide"><img src="images/d3.jpg" alt="Image 3"></div>
+<div class="swiper-slide"><img src="images/d4.jpg" alt="Image 4"></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+<div class="activity-heading">
+Presented by Geeta Marmaat
+</div>
+<div class="activity-description">
+This session focused on Indian communication strategies. A visit to their university further enhanced the international scope of the program.
+</div>
+</div>
+
+
+</div>
+</div>
+
+
 <!-- ===== FOOTER ===== -->
 <footer class="custom-footer">
-<p>
-© 2025 XDMARCOMS. All rights reserved. |
-<a href="#">Privacy Policy</a> |
-<a href="#">Terms of Service</a>
-</p>
+<p>© 2025 XDMARCOMS. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('.swiper').forEach(function(el) {
+new Swiper(el, {
+navigation: {
+nextEl: el.querySelector('.swiper-button-next'),
+prevEl: el.querySelector('.swiper-button-prev'),
+},
+loop: true,
+});
+});
+});
+</script>
