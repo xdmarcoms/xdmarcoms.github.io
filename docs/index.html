@@ -136,43 +136,41 @@ html, body {
 }
 
 body {
-  margin: 0; /* Αφαιρεί προεπιλεγμένα περιθώρια του body */
-  font-family: Arial, sans-serif; /* Ορίζει τη γραμματοσειρά */
-  background-color: #f4f4f4; /* Θέτει ένα απαλό γκρι χρώμα φόντου */
-  color: #333; /* Σκούρο γκρι για το χρώμα του κειμένου */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 a {
-  text-decoration: none; /* Αφαιρεί την υπογράμμιση από τα links */
-  color: inherit; /* Τα links παίρνουν το ίδιο χρώμα με το περιβάλλον κείμενο */
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
-  max-width: 100%; /* Δεν αφήνει τις εικόνες να ξεπερνούν το πλάτος του container */
-  height: auto; /* Διατηρεί την αναλογία διαστάσεων της εικόνας */
-  display: block; /* Αφαιρεί κενά κάτω από εικόνες (σε inline context) */
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-
 
 /* ===== NAVBAR ===== */
 .navbar {
-  display: flex; /* Χρήση flexbox για στοίχιση */
-  align-items: center; /* Κάθετη στοίχιση στο κέντρο */
-  justify-content: space-between; /* Κενό ανάμεσα σε αριστερά και δεξιά στοιχεία */
-  background-color: #1d2e3f; /* Σκούρο μπλε φόντο */
-  padding: 1rem 2rem; /* Εσωτερικό padding γύρω από τη navbar */
-  color: white; /* Χρώμα κειμένου */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1d2e3f;
+  padding: 1rem 2rem;
+  color: white;
 }
 
 .navbar-left {
-  display: flex; /* Flex για στοίχιση logo και τίτλου */
-  align-items: center; /* Κάθετη στοίχιση */
-  gap: 0.5rem; /* Κενό μεταξύ στοιχείων */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navbar-left img {
-  width: 30px; /* Σταθερό πλάτος εικόνας */
-  height: 30px; /* Σταθερό ύψος εικόνας */
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-left span {
@@ -181,13 +179,13 @@ img {
 }
 
 .navbar-right {
-  display: flex; /* Flex για οριζόντια διάταξη */
-  gap: 1.5rem; /* Απόσταση ανάμεσα στα links */
+  display: flex;
+  gap: 1.5rem;
 }
 
 .navbar-right a {
-  color: white; /* Χρώμα link */
-  font-size: 1rem; /* Μέγεθος γραμματοσειράς */
+  color: white;
+  font-size: 1rem;
 }
 
 .navbar-right a:hover {
@@ -195,7 +193,6 @@ img {
 }
 
 /* ===== HERO SECTION ===== */
-
 .hero-wrapper {
   position: relative;
   height: 100vh;
@@ -217,18 +214,18 @@ img {
 .hero {
   display: flex;
   height: 100vh;
-  padding: 2rem;
   position: relative;
   z-index: 1;
 }
 
 .hero-left {
-  flex: 1.2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
-  padding: 3.5rem;
+  padding: 1.2rem;
+  max-width: 900px;
 }
 
 .hero-left h1 {
@@ -254,122 +251,83 @@ img {
 }
 
 .hero-right {
-  flex: 0.8;
+  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
+  justify-content: flex-end;
   padding: 0;
+  margin: 0;
+  height: 100vh;
+  padding-right: 0;
 }
 
 .logo-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
+  width: 100%;
 }
 
 .logo-wrapper img {
   max-height: 100%;
   width: auto;
-  display: block;
   object-fit: contain;
-  margin: 0;
-  padding: 0;
 }
 
-
-
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 4rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #1d2e3f;
-}
-
-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background-color: #1d2e3f;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  
-  .hero-right {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .hero-left {
-    align-items: center;
-  }
-
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-
-  .hero-left p {
-    font-size: 1rem;
-  }
-
-  .hero-right img {
-    height: auto;
-    width: auto;
-}
-
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .navbar-right {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-
-/* ===== OTHER HERO SECTIONS ===== */
-.hero-section2 {
+/* ===== DOUBLE SECTION ===== */
+.hero-double-section {
   position: relative;
-  height: 45vh;
+  height: 60vh;
   overflow: hidden;
+  background-image: url("images/pic2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 4rem 2rem;
 }
 
-.hero-section3 {
+.hero-double-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero-double-section .hero-content {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.hero-double-section .hero-title {
+  font-size: 1.6rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.hero-double-section .hero-subtitle {
+  font-size: 0.99rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ===== SECTION 3 ===== */
+.hero-section4 {
   position: relative;
   height: 55vh;
   overflow: hidden;
 }
 
-.hero-section4 {
-  position: relative;
-  height: 85vh;
-  overflow: hidden;
-}
-
-.image1, .image2, .image3 {
+.image3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -379,8 +337,6 @@ footer {
   z-index: 1;
 }
 
-.hero-section2 .hero-content,
-.hero-section3 .hero-content,
 .hero-section4 .hero-content {
   position: relative;
   z-index: 2;
@@ -394,15 +350,11 @@ footer {
   text-align: justify;
 }
 
-.hero-section2 .hero-title,
-.hero-section3 .hero-title,
 .hero-section4 .hero-title {
   font-size: 1.6rem;
   text-align: left;
 }
 
-.hero-section2 .hero-subtitle,
-.hero-section3 .hero-subtitle,
 .hero-section4 .hero-subtitle {
   font-size: 0.99rem;
   font-weight: 400;
@@ -410,18 +362,29 @@ footer {
   text-align: justify;
 }
 
-/* ===== FOOTER FIXED ===== */
-.page-wrapper {
-  min-height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
+.hero-section4 .hero-subtitle ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.hero-section4 .hero-subtitle ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1d2e3f;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
 }
 
 .custom-footer {
   background-color: #2f4154;
   color: white;
   text-align: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
   font-size: 0.9rem;
   height: 60px;
   line-height: 38px;
@@ -437,36 +400,37 @@ footer {
   text-decoration: underline;
 }
 
-.logo-container {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 
-.logo-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  .hero-left {
+    align-items: center;
+  }
 
-.activities-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px; /* Απόσταση ανάμεσα στις κάρτες */
-  justify-content: center;
-  padding: 2rem;
-}
+  .hero-left h1 {
+    font-size: 2rem;
+  }
 
-.activity-box {
-  flex: 1 1 calc(50% - 12px);
-  max-width: calc(50% - 12px);
-  background: white;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-}
+  .hero-left p {
+    font-size: 1rem;
+  }
 
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 </style>
 <!-- ===== HERO SECTION ===== -->
 <div class="hero-wrapper">
@@ -481,13 +445,15 @@ Department of Communication and Marketing<br> Cyprus University of Technology
 <p><a href="./tab4.html" class="apply-button">APPLY NOW</a></p>
 </div>
 <div class="hero-right">
+<div class="logo-wrapper">
 <p><img src="images/final_logo.png" alt="Programme Logo"></p>
 </div>
 </div>
 </div>
-<!-- ===== SECTION 1 ===== -->
-<div class="hero-section2">
-<img src="images/pic1.jpg" alt="image1" class="image1" loading="lazy">
+</div>
+<!-- ===== PURPOSE + MISSION ===== -->
+<div class="hero-double-section">
+<div class="hero-content-wrapper">
 <div class="hero-content">
 <h1 class="hero-title">
 Purpose
@@ -496,28 +462,25 @@ Purpose
 To empower ambitious students and professionals to master digital storytelling, navigate the data-driven marketing landscape, and lead brands in delivering meaningful, memorable experiences to the connected consumer.
 </p>
 </div>
-</div>
-<!-- ===== SECTION 2 ===== -->
-<div class="hero-section3">
-<img src="images/pic2.jpg" alt="image2" class="image2" loading="lazy">
 <div class="hero-content">
 <h1 class="hero-title">
 Mission
 </h1>
 <p class="hero-subtitle">
 To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
-</p><ul class="hero-subtitle">
+</p>
+<ul class="hero-subtitle">
 <li>
-Advanced skills in AI, data analytics, IoT, and phygital marketing
+Advanced skills in AI, data analytics, IoT, and phygital marketing.
 </li>
 <li>
-Essential soft skills such as adaptability, agility, resilience, and collaboration
+Essential soft skills such as adaptability, agility, resilience, and collaboration.
 </li>
 <li>
-The capacity to create sustainable value in an ever-evolving digital landscape
+The capacity to create sustainable value in an ever-evolving digital landscape.
 </li>
 </ul>
-<p></p>
+</div>
 </div>
 </div>
 <!-- ===== SECTION 3 ===== -->
@@ -527,29 +490,17 @@ The capacity to create sustainable value in an ever-evolving digital landscape
 <h1 class="hero-title">
 Key Features of Our Programme
 </h1>
-<p class="hero-subtitle">
-To foster a student-centric, innovation-driven learning environment where individuals thrive academically, professionally, and personally.
-</p><ul class="hero-subtitle">
+<ul class="hero-subtitle">
 <li>
-Flexible Delivery Structure
-<ul>
-XDMarComs offers a flexible, hybrid learning programme with intensive five-week modules. Combining weekend classes, online seminars, and self-paced content, it supports professionals in balancing work with academic growth.
-</ul>
+<strong>Flexible Learning</strong> Hybrid programme with intensive five-week modules combining weekend classes, online seminars, and self-paced content for working professionals.
 </li>
 <li>
-Integrated Cross-Disciplinary Framework
-<ul>
-Excellence in modern marketing demands a multidisciplinary approach. Our curriculum integrates technology, psychology, analytics, design, consumer culture, and communication to equip graduates with strategic, cross-functional solutions.
-</ul>
+<strong>Cross-Disciplinary Approach</strong> Integrates technology, psychology, analytics, design, and communication for strategic, well-rounded marketing expertise.
 </li>
 <li>
-Continuous Professional Development
-<ul>
-Beyond career advancement, the programme cultivates self-directed learning and metacognitive skills, empowering graduates to adapt and grow continuously in evolving digital marketing landscapes.
-</ul>
+<strong>Continuous Growth</strong> Develops self-directed learning skills to help graduates adapt and thrive in evolving digital marketing landscapes.
 </li>
 </ul>
-<p></p>
 </div>
 </div>
 <!-- ===== FOOTER ===== -->

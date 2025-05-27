@@ -67,6 +67,11 @@ output: html_document
   }
 
   ul { padding-left: 20px; }
+  
+  
+  h2 {
+  font-size: 20px;  /* ή όσο μικρό θέλεις */
+  }
 </style>
 
 
