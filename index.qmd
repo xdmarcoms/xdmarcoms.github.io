@@ -423,6 +423,22 @@ footer {
     max-width: 100%;
   }
 }
+
+
+
+
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.swiper-slide {
+  position: relative;
+}
 </style>
 
 <!-- ===== HERO SECTION ===== -->
@@ -478,125 +494,194 @@ To foster a student-centric, innovation-driven learning environment where indivi
 </div>
 
 <!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
-<!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
 <div class="activity-section">
 <h2 class="activity-subtitle">News and Events</h2>
-<div class="activities">
-
-<!-- First Activity -->
-<div class="activity-box">
-<div class="activity-number">01 Lobbying and Public Affairs in Cyprus</div>
-<div class="swiper">
+<div class="swiper mySwiper">
 <div class="swiper-wrapper">
-<div class="swiper-slide"><img src="images/a1.jpg" alt="Image 1"></div>
-<div class="swiper-slide"><img src="images/a2.jpg" alt="Image 2"></div>
-<div class="swiper-slide"><img src="images/a3.jpg" alt="Image 3"></div>
-<div class="swiper-slide"><img src="images/a4.jpg" alt="Image 4"></div>
-</div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-</div>
-<div class="activity-heading">Presented by Mairy Pyrgou<br>MSc Public Affairs Consultant, President of Fimonoi</div>
-<div class="activity-description">
-This presentation took place as part of the Reputation and Media Management course, focusing on the role of lobbying in influencing government decisions and shaping public perception in Cyprus.
-</div>
-</div>
-
-<!-- Second Activity -->
-<div class="activity-box">
-<div class="activity-number">02 Shaping the Wine Tourism Identity & Image of Cyprus: Theoretical and Practical Approaches</div>
-<div class="swiper">
+<!-- Event 1 -->
+<div class="swiper-slide">
+<div class="nested-swiper-container nestedSwiper1 swiper">
 <div class="swiper-wrapper">
-<div class="swiper-slide"><img src="images/b1.jpg" alt="Image 1"></div>
-<div class="swiper-slide"><img src="images/b2.jpg" alt="Image 2"></div>
-<div class="swiper-slide"><img src="images/b3.jpg" alt="Image 3"></div>
-<div class="swiper-slide"><img src="images/b4.jpg" alt="Image 4"></div>
-<div class="swiper-slide"><img src="images/b5.jpg" alt="Image 5"></div>
-<div class="swiper-slide"><img src="images/b6.jpg" alt="Image 6"></div>
-<div class="swiper-slide"><img src="images/b7.jpg" alt="Image 7"></div>
-<div class="swiper-slide"><img src="images/b8.jpg" alt="Image 8"></div>
-<div class="swiper-slide"><img src="images/b9.jpg" alt="Image 9"></div>
-<div class="swiper-slide"><img src="images/b10.jpg" alt="Image 10"></div>
-<div class="swiper-slide"><img src="images/b11.jpg" alt="Image 11"></div>
+<div class="swiper-slide"><img src="images/a1.jpg" alt="Image A1" /></div>
+<div class="swiper-slide"><img src="images/a2.jpg" alt="Image A2" /></div>
+<div class="swiper-slide"><img src="images/a3.jpg" alt="Image A3" /></div>
+<div class="swiper-slide"><img src="images/a4.jpg" alt="Image A4" /></div>
 </div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
+<div class="swiper-button-next nestedSwiper1-next"></div>
+<div class="swiper-button-prev nestedSwiper1-prev"></div>
 </div>
-<div class="activity-heading">
-Keynote speakers: Dr. Maria Alempaki: Senior Researcher, Institute of Agricultural Economics and Sociology, ELGO-DIMITRA<br>
-Elina Christofidou: Tourism Officer, Deputy Ministry of Tourism of Cyprus<br>
-Ilias Makridis: Operations Coordinator, Cyprus Wine Core<br>
-Michalis Georgiou: Wine Journalist
-</div>
-<div class="activity-description">
-As part of the MSc in Experiential Digital Marketing Communications (XDMarComs@CUT), this seminar organized with the Institute of Agricultural Economics and Sociology (ELGO-DIMITRA) and supervised by Dr. Maria Alempaki examines wine tourism identity and digital branding in Cyprus.
+<div class="caption">
+<h3>Lobbying and Public Affairs in Cyprus</h3>
+<p><strong>Presented by:</strong> Mairy Pyrgou – MSc Public Affairs Consultant, President of Fimonoi</p>
+<p>This presentation took place as part of the Reputation and Media Management course, focusing on the role of lobbying in influencing government decisions and shaping public perception in Cyprus.</p>
 </div>
 </div>
-
-
-<!-- Third Activity -->
-<div class="activity-box">
-<div class="activity-number">03 Intercultural Communication - Marcoms in Slovakia</div>
-<div class="swiper">
+<!-- Event 2 -->
+<div class="swiper-slide">
+<div class="nested-swiper-container nestedSwiper2 swiper">
 <div class="swiper-wrapper">
-<div class="swiper-slide"><img src="images/c1.jpg" alt="Image 1"></div>
-<div class="swiper-slide"><img src="images/c2.jpg" alt="Image 2"></div>
-<div class="swiper-slide"><img src="images/c3.jpg" alt="Image 3"></div>
-<div class="swiper-slide"><img src="images/c4.jpg" alt="Image 4"></div>
+<div class="swiper-slide"><img src="images/b1.jpg" alt="Image B1" /></div>
+<div class="swiper-slide"><img src="images/b2.jpg" alt="Image B2" /></div>
+<div class="swiper-slide"><img src="images/b3.jpg" alt="Image B3" /></div>
+<div class="swiper-slide"><img src="images/b4.jpg" alt="Image B4" /></div>
+<div class="swiper-slide"><img src="images/b5.jpg" alt="Image B5" /></div>
+<div class="swiper-slide"><img src="images/b6.jpg" alt="Image B6" /></div>
+<div class="swiper-slide"><img src="images/b7.jpg" alt="Image B7" /></div>
+<div class="swiper-slide"><img src="images/b8.jpg" alt="Image B8" /></div>
+<div class="swiper-slide"><img src="images/b9.jpg" alt="Image B9" /></div>
+<div class="swiper-slide"><img src="images/b10.jpg" alt="Image B10" /></div>
+<div class="swiper-slide"><img src="images/b11.jpg" alt="Image B11" /></div>
 </div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
+<div class="swiper-button-next nestedSwiper2-next"></div>
+<div class="swiper-button-prev nestedSwiper2-prev"></div>
 </div>
-<div class="activity-heading">
-Presented by Lucia Dancisinova, Eva Benkova
+<div class="caption">
+<h3>Shaping the Wine Tourism Identity & Image of Cyprus</h3>
+<p><strong>Keynote speakers:</strong> Dr. Maria Alempaki, Elina Christofidou, Ilias Makridis, Michalis Georgiou</p>
+<p>This seminar examines wine tourism identity and digital branding in Cyprus, organized with ELGO-DIMITRA and supervised by Dr. Alempaki.</p>
 </div>
-<div class="activity-description">
-A session on Intercultural Communication, Presentation and Communication Skills – Marcoms in Slovakia was delivered by Lucia Dančišinová and Eva Beňková. The presentation introduced a postgraduate program similar to our Master’s in Marketing Communications.
 </div>
-</div>
-
-<!-- Fourth Activity -->
-<div class="activity-box">
-<div class="activity-number">04 The Marketing and Media landscapes of India</div>
-<div class="swiper">
+<!-- Event 3 -->
+<div class="swiper-slide">
+<div class="nested-swiper-container nestedSwiper3 swiper">
 <div class="swiper-wrapper">
-<div class="swiper-slide"><img src="images/d1.jpg" alt="Image 1"></div>
-<div class="swiper-slide"><img src="images/d2.jpg" alt="Image 2"></div>
-<div class="swiper-slide"><img src="images/d3.jpg" alt="Image 3"></div>
-<div class="swiper-slide"><img src="images/d4.jpg" alt="Image 4"></div>
+<div class="swiper-slide"><img src="images/c1.jpg" alt="Image C1" /></div>
+<div class="swiper-slide"><img src="images/c2.jpg" alt="Image C2" /></div>
+<div class="swiper-slide"><img src="images/c3.jpg" alt="Image C3" /></div>
+<div class="swiper-slide"><img src="images/c4.jpg" alt="Image C4" /></div>
 </div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
+<div class="swiper-button-next nestedSwiper3-next"></div>
+<div class="swiper-button-prev nestedSwiper3-prev"></div>
 </div>
-<div class="activity-heading">
-Presented by Geeta Marmaat
+<div class="caption">
+<h3>Intercultural Communication - Marcoms in Slovakia</h3>
+<p><strong>Presented by:</strong> Lucia Dancisinova, Eva Benkova</p>
+<p>A session on intercultural communication, presentation and communication skills.</p>
 </div>
-<div class="activity-description">
-This session focused on Indian communication strategies. A visit to their university further enhanced the international scope of the program.
+</div>
+<!-- Event 4 -->
+<div class="swiper-slide">
+<div class="nested-swiper-container nestedSwiper4 swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="images/d1.jpg" alt="Image D1" /></div>
+<div class="swiper-slide"><img src="images/d2.jpg" alt="Image D2" /></div>
+<div class="swiper-slide"><img src="images/d3.jpg" alt="Image D3" /></div>
+<div class="swiper-slide"><img src="images/d4.jpg" alt="Image D4" /></div>
+</div>
+<div class="swiper-button-next nestedSwiper4-next"></div>
+<div class="swiper-button-prev nestedSwiper4-prev"></div>
+</div>
+<div class="caption">
+<h3>The Marketing and Media landscapes of India</h3>
+<p><strong>Presented by:</strong> Geeta Marmaat</p>
+<p>This session focused on Indian communication strategies. A visit to their university further enhanced the international scope of the program.</p>
+</div>
+</div>
+</div>
+<!-- Main Swiper navigation and pagination -->
+<div class="swiper-button-next main-next"></div>
+<div class="swiper-button-prev main-prev"></div>
+<div class="swiper-pagination"></div>
 </div>
 </div>
 
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-</div>
-</div>
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+<style>
+.activity-section {
+max-width: 1200px;
+margin: auto;
+padding: 20px;
+}
+.swiper-slide {
+display: flex;
+gap: 30px;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+.nested-swiper-container {
+flex: 1 1 55%;
+height: 180px;
+position: relative;
+}
+.nested-swiper-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 6px;
+}
+.caption {
+flex: 1 1 40%;
+font-family: Arial, sans-serif;
+}
+.caption h3 {
+margin-top: 0;
+}
+/* Adjust nested swiper nav buttons */
+.nested-swiper-container .swiper-button-next,
+.nested-swiper-container .swiper-button-prev {
+color: #333;
+}
+</style>
 
-<!-- ===== FOOTER ===== -->
-<footer class="custom-footer">
-<p>© 2025 XDMARCOMS. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-document.querySelectorAll('.swiper').forEach(function(el) {
-new Swiper(el, {
+// Main Swiper
+const mainSwiper = new Swiper(".mySwiper", {
+loop: false,
 navigation: {
-nextEl: el.querySelector('.swiper-button-next'),
-prevEl: el.querySelector('.swiper-button-prev'),
+nextEl: ".main-next",
+prevEl: ".main-prev",
 },
+pagination: {
+el: ".swiper-pagination",
+clickable: true,
+},
+slidesPerView: 1,
+spaceBetween: 40,
+});
+
+// Nested Swipers
+const nestedSwiper1 = new Swiper(".nestedSwiper1", {
+slidesPerView: 4,
+spaceBetween: 10,
 loop: true,
+navigation: {
+nextEl: ".nestedSwiper1-next",
+prevEl: ".nestedSwiper1-prev",
+},
 });
+
+const nestedSwiper2 = new Swiper(".nestedSwiper2", {
+slidesPerView: 11,
+spaceBetween: 10,
+loop: true,
+navigation: {
+nextEl: ".nestedSwiper2-next",
+prevEl: ".nestedSwiper2-prev",
+},
 });
+
+const nestedSwiper3 = new Swiper(".nestedSwiper3", {
+slidesPerView: 4,
+spaceBetween: 10,
+loop: true,
+navigation: {
+nextEl: ".nestedSwiper3-next",
+prevEl: ".nestedSwiper3-prev",
+},
+});
+
+const nestedSwiper4 = new Swiper(".nestedSwiper4", {
+slidesPerView: 4,
+spaceBetween: 10,
+loop: true,
+navigation: {
+nextEl: ".nestedSwiper4-next",
+prevEl: ".nestedSwiper4-prev",
+},
 });
 </script>
