@@ -392,11 +392,16 @@ footer {
 /* === RESPONSIVE FIXES === */
 @media (max-width: 768px) {
   .nested-swiper-container {
-    height: 300px;
+    height: auto;
+    max-height: 300px;
+    overflow: hidden;
   }
 
   .nested-swiper-container img {
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Εναλλακτικά: contain ή fill ανάλογα το επιθυμητό */
+    display: block;
   }
 
   .swiper {
@@ -433,7 +438,9 @@ footer {
   }
 
   .activities {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 </style>
