@@ -3,17 +3,52 @@ title: "Admission Requirements"
 ---
 
 <style>
-p {
-  text-align: justify;
-}
+  p {
+    text-align: justify;
+  }
 
-body {
-  font-family: 'Arial', sans-serif; }
-  
-  
-.gt_table_container {
-  overflow-x: auto;
-}
+  .gt_table_container {
+    overflow-x: auto;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  th {
+    background: linear-gradient(135deg, #4a90e2, #357ABD);
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+  }
+
+  td:first-child {
+    font-weight: 600;
+    text-align: left;
+    color: #333;
+  }
+
+  tr:hover td {
+    background: #f9fbff;
+  }
 </style>
 
 <p> The XDMarComs MSc is an elite program designed on the basis of state-of-the-art educational design principles and using teaching techniques which combine academic rigour with practical application. It provides a rich learning experience and advances the personal development and professional networking of participants by welcoming a diverse student body. It values both academic achievement and professional experience and provides a personalized learning environment, tailored to individual needs and aspirations. It offers a traditional, academic entry pathway and a professional one.
