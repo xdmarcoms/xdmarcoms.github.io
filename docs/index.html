@@ -123,6 +123,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <style>
 
@@ -162,17 +165,17 @@ img {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 
 .navbar-left img {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
 }
 
 .navbar-left span {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .navbar-right {
@@ -226,13 +229,13 @@ img {
 }
 
 .hero-left h1 {
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .hero-left p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -247,117 +250,98 @@ img {
   margin-top: 0.5rem;
 }
 
-.hero-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  padding-right: 0;
-}
-
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 100%;
-  width: 100%;
-}
-
-.logo-wrapper img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-}
-
-/* ===== DOUBLE SECTION ===== */
-.hero-double-section {
+/* ===== DOUBLE SECTION + SECTION 3 SHARED BACKGROUND ===== */
+.hero-bg-shared {
   position: relative;
-  height: 70vh;
-  overflow: hidden;
   background-image: url("images/pic2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  padding: 4rem 2rem;
+  overflow: hidden;
 }
 
-.hero-double-section::before {
+.hero-bg-shared::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,0.55); /* λίγο πιο έντονο για καλύτερη αναγνωσιμότητα */
   z-index: 0;
 }
 
-.hero-content-wrapper {
+.hero-bg-shared .hero-content,
+.hero-bg-shared .hero-content-wrapper {
   position: relative;
   z-index: 1;
+}
+
+/* ===== PURPOSE + MISSION + FEATURES ===== */
+.hero-double-section {
+  padding: 4rem 2rem;
+}
+
+.hero-content-wrapper {
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* ενιαίο διάφανο πλαίσιο */
+  padding: 3rem 2.5rem;
+  border-radius: 10px;
+}
+
+/* Τίτλοι */
+.hero-double-section .hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Κείμενο */
+.hero-double-section .hero-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* Bullets */
+.hero-double-section .hero-subtitle ul,
+.hero-double-section ul {
+  padding-left: 1.5rem; /* ίδια απόσταση για όλα */
+  margin: 0;
+}
+
+.hero-double-section .hero-subtitle li,
+.hero-double-section li {
+  margin-bottom: 0.8rem; /* ίσα κενά ανάμεσα στα bullets */
+  text-align: justify;
+}
+
+
+/* ===== SECTION 3 ===== */
+.hero-section4 {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-section4 .hero-content {
   max-width: 800px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem 1.5rem;
-}
-
-.hero-double-section .hero-content {
-  margin-bottom: 2rem;
-  text-align: justify;
-}
-
-.hero-double-section .hero-title {
-  font-size: 1.6rem;
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-
-.hero-double-section .hero-subtitle {
-  font-size: 0.99rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-/* ===== SECTION 3 ===== */
-.hero-section4 {
-  position: relative;
-  height: 55vh;
-  overflow: hidden;
-}
-
-.image3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero-section4 .hero-content {
-  position: relative;
-  z-index: 2;
   color: white;
-  padding: 2rem;
-  max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: justify;
 }
 
 .hero-section4 .hero-title {
-  font-size: 1.6rem;
-  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .hero-section4 .hero-subtitle {
-  font-size: 0.99rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: justify;
 }
 
@@ -416,10 +400,10 @@ img {
 }
 
 .activity-box {
-  background-color: white;
+  background-color: rgba(0,0,0,0.6); /* ημιδιάφανο μαύρο */
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .activity-number {
@@ -431,14 +415,14 @@ img {
 
 .swiper {
   width: 100%;
-  height: 500px; /* Σταθερό ύψος για όλα τα slides */
   margin-bottom: 1rem;
+  height: auto; /* αφήνουμε το ύψος να προσαρμόζεται */
 }
 
 .swiper-slide img {
   width: 100%;
-  height: 100%; /* Να γεμίζουν όλο το ύψος του slide */
-  object-fit: cover; /* Κόβει την εικόνα ώστε να μην παραμορφωθεί */
+  height: 500px; /* κρατάμε τις εικόνες σταθερές */
+  object-fit: cover;
   border-radius: 8px;
   display: block;
 }
@@ -451,29 +435,107 @@ img {
 .activity-heading {
   font-weight: bold;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: white; /* λευκά γράμματα */
 }
 
 .activity-description {
   font-size: 0.95rem;
   line-height: 1.5;
   text-align: justify;
+  color: white; /* λευκά γράμματα */
 }
 
-/* Responsive */
+/* Στυλ για λεζάντες */
+.caption {
+  margin-top: 0.8rem;
+  color: white;
+  text-align: center;
+}
+
+.caption h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.caption p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ===== Responsive για κινητά ===== */
 @media (max-width: 768px) {
-  .activity-subtitle {
-    font-size: 1.4rem;
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  .navbar-left span {
+    font-size: 1.1rem;
+  }
+  .navbar-right {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
 
-  .activity-heading {
-    font-size: 0.95rem;
+  /* HERO SECTION */
+  .hero-wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+  .hero-left p {
+    font-size: 1rem;
+  }
+  .apply-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 
-  .activity-description {
-    font-size: 0.9rem;
+  /* PURPOSE + MISSION + FEATURES */
+  .hero-double-section {
+    padding: 2rem 1rem;
+  }
+  .hero-content-wrapper {
+    padding: 1.5rem;
+  }
+  .hero-double-section .hero-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .hero-double-section .hero-subtitle {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  /* ACTIVITY SECTION */
+  .activities {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .swiper-slide img {
+    height: 250px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
   }
 }
+
+
 
 /* ===== FOOTER ===== */
 footer {
@@ -504,199 +566,8 @@ footer {
 .custom-footer a:hover {
   text-decoration: underline;
 }
-
-/* ===== RESPONSIVE ===== */
-/* === RESPONSIVE FIXES === */
-@media (max-width: 768px) {
-  .nested-swiper-container {
-    height: auto;
-    max-height: 300px;
-    overflow: hidden;
-  }
-
-  .nested-swiper-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Εναλλακτικά: contain ή fill ανάλογα το επιθυμητό */
-    display: block;
-  }
-
-  .swiper {
-    height: auto;
-  }
-
-  .caption {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .caption h3 {
-    font-size: 1.1rem;
-  }
-
-  .hero-left h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-left p {
-    font-size: 0.95rem;
-  }
-
-  .hero-double-section,
-  .hero-section4 {
-    height: auto;
-    padding: 2rem 1rem;
-  }
-
-  .hero-section4 .hero-content {
-    position: static;
-    transform: none;
-    margin-top: 1rem;
-  }
-
-  .activities {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .hero-left h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-left p {
-    font-size: 1.05rem;
-  }
-
-  .hero-double-section,
-  .hero-section4 {
-    padding: 2rem 1rem;
-    height: auto;
-  }
-
-  .hero-section4 .hero-content,
-  .hero-double-section .hero-content-wrapper {
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-
-  .hero-double-section .hero-title,
-  .hero-section4 .hero-title {
-    font-size: 1.4rem;
-  }
-
-  .hero-double-section .hero-subtitle,
-  .hero-section4 .hero-subtitle {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-left,
-  .hero-right {
-    padding: 1rem;
-    max-width: 100%;
-  }
-
-  .hero-left h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-left p {
-    font-size: 0.95rem;
-  }
-
-  .apply-button {
-    font-size: 1.2rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  .logo-wrapper img {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-
-  .activity-subtitle {
-    font-size: 1.4rem;
-  }
-
-  .activities {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .swiper {
-    height: auto;
-  }
-
-  .nested-swiper-container {
-    height: auto !important;
-    max-height: 300px;
-    overflow: hidden;
-  }
-
-  .nested-swiper-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .caption {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .caption h3 {
-    font-size: 1.1rem;
-  }
-
-  .hero-section4 .hero-content {
-    position: static;
-    transform: none;
-    top: auto;
-    margin-top: 1rem;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-left h1 {
-    font-size: 1.5rem;
-  }
-
-  .apply-button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .activity-description {
-    font-size: 0.85rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none; /* hide nav buttons on very small screens */
-  }
-
-  .hero-double-section .hero-title,
-  .hero-section4 .hero-title {
-    font-size: 1.2rem;
-  }
-
-  .hero-double-section .hero-subtitle,
-  .hero-section4 .hero-subtitle {
-    font-size: 0.9rem;
-  }
-}
 </style>
+<!-- ===== NAVBAR ===== -->
 <!-- ===== HERO SECTION ===== -->
 <div class="hero-wrapper">
 <div class="hero">
@@ -709,16 +580,12 @@ Department of Communication and Marketing<br>Cyprus University of Technology
 </p>
 <p><a href="./tab4.html" class="apply-button">APPLY NOW</a></p>
 </div>
-<div class="hero-right">
-<div class="logo-wrapper">
-<p><img src="images/final_logo.png" alt="Programme Logo"></p>
 </div>
 </div>
-</div>
-</div>
-<!-- ===== PURPOSE + MISSION ===== -->
-<div class="hero-double-section">
+<!-- ===== PURPOSE + MISSION + KEY FEATURES (ενιαίο background) ===== -->
+<div class="hero-double-section hero-bg-shared">
 <div class="hero-content-wrapper">
+<!-- Purpose -->
 <div class="hero-content">
 <h1 class="hero-title">
 Purpose
@@ -727,6 +594,7 @@ Purpose
 To empower ambitious students and professionals to master digital storytelling, navigate the data-driven marketing landscape, and lead brands in delivering meaningful, memorable experiences to the connected consumer.
 </p>
 </div>
+<!-- Mission -->
 <div class="hero-content">
 <h1 class="hero-title">
 Mission
@@ -746,11 +614,7 @@ The capacity to create sustainable value in an ever-evolving digital landscape.
 </li>
 </ul>
 </div>
-</div>
-</div>
-<!-- ===== SECTION 3 ===== -->
-<div class="hero-section4">
-<img src="images/pic3.jpg" alt="image3" class="image3" loading="lazy">
+<!-- Key Features -->
 <div class="hero-content">
 <h1 class="hero-title">
 Key Features of Our Programme
@@ -766,6 +630,7 @@ Key Features of Our Programme
 <strong>Continuous Growth:</strong> Develops self-directed learning skills to help graduates adapt and thrive in evolving digital marketing landscapes.
 </li>
 </ul>
+</div>
 </div>
 </div>
 <!-- ===== NEWS AND EVENTS CAROUSEL ===== -->
@@ -819,34 +684,13 @@ This presentation took place as part of the Reputation and Media Management cour
 <img src="images/b1.jpg" alt="Image B1">
 </div>
 <div class="swiper-slide">
-<img src="images/b2.jpg" alt="Image B2">
-</div>
-<div class="swiper-slide">
-<img src="images/b3.jpg" alt="Image B3">
-</div>
-<div class="swiper-slide">
 <img src="images/b4.jpg" alt="Image B4">
 </div>
 <div class="swiper-slide">
 <img src="images/b5.jpg" alt="Image B5">
 </div>
 <div class="swiper-slide">
-<img src="images/b6.jpg" alt="Image B6">
-</div>
-<div class="swiper-slide">
-<img src="images/b7.jpg" alt="Image B7">
-</div>
-<div class="swiper-slide">
-<img src="images/b8.jpg" alt="Image B8">
-</div>
-<div class="swiper-slide">
 <img src="images/b9.jpg" alt="Image B9">
-</div>
-<div class="swiper-slide">
-<img src="images/b10.jpg" alt="Image B10">
-</div>
-<div class="swiper-slide">
-<img src="images/b11.jpg" alt="Image B11">
 </div>
 </div>
 <div class="swiper-button-next nestedSwiper2-next">
@@ -879,19 +723,10 @@ This seminar examines wine tourism identity and digital branding in Cyprus, orga
 <img src="images/c1.jpg" alt="Image C1">
 </div>
 <div class="swiper-slide">
-<img src="images/c3.jpg" alt="Image C3">
-</div>
-<div class="swiper-slide">
-<img src="images/c5.jpg" alt="Image C5">
-</div>
-<div class="swiper-slide">
-<img src="images/c6.jpg" alt="Image C6">
+<img src="images/c10.jpg" alt="Image C10">
 </div>
 <div class="swiper-slide">
 <img src="images/c7.jpg" alt="Image C7">
-</div>
-<div class="swiper-slide">
-<img src="images/c10.jpg" alt="Image C10">
 </div>
 </div>
 <div class="swiper-button-next nestedSwiper3-next">
@@ -966,113 +801,118 @@ This session focused on Indian communication strategies. A visit to their univer
 <p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"></p>
 <!-- Include Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<style>
-.activity-section {
-max-width: 1200px;
-margin: auto;
-padding: 20px;
-}
-.swiper-slide {
-display: flex;
-flex-direction: column;
-gap: 20px;
-align-items: flex-start;
-}
-.caption {
-margin-top: 0; /* δεν χρειάζεται margin-top γιατί είναι ήδη κάτω */
-}
-.nested-swiper-container {
-position: relative;
-height: 800px !important;
-z-index: 1;
-}
-.nested-swiper-container img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 6px;
-display: block;
-position: relative;
-z-index: 1;
-}
-.caption {
-font-family: Arial, sans-serif;
-margin-top: 20px;
-position: relative;
-z-index: 10; /* πάνω από εικόνες */
-}
-.caption h3 {
-margin-top: 0;
-}
-/* Adjust nested swiper nav buttons */
-.nested-swiper-container .swiper-button-next,
-.nested-swiper-container .swiper-button-prev {
-color: #333;
-}
-</style>
 <script>
 // Main Swiper
 const mainSwiper = new Swiper(".mySwiper", {
-loop: false,
-navigation: {
-nextEl: ".main-next",
-prevEl: ".main-prev",
-},
-pagination: {
-el: ".swiper-pagination",
-clickable: true,
-},
-slidesPerView: 1,
-spaceBetween: 40,
+  loop: false,
+  navigation: {
+    nextEl: ".main-next",
+    prevEl: ".main-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 40,
 });
 
 // Nested Swipers
 const nestedSwiper1 = new Swiper(".nestedSwiper1", {
-slidesPerView: 4,
-spaceBetween: 10,
-loop: true,
-navigation: {
-nextEl: ".nestedSwiper1-next",
-prevEl: ".nestedSwiper1-prev",
-},
+  slidesPerView: 4,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".nestedSwiper1-next",
+    prevEl: ".nestedSwiper1-prev",
+  },
 });
 
 const nestedSwiper2 = new Swiper(".nestedSwiper2", {
-slidesPerView: 11,
-spaceBetween: 10,
-loop: true,
-navigation: {
-nextEl: ".nestedSwiper2-next",
-prevEl: ".nestedSwiper2-prev",
-},
+  slidesPerView: 4,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".nestedSwiper2-next",
+    prevEl: ".nestedSwiper2-prev",
+  },
 });
 
 const nestedSwiper3 = new Swiper(".nestedSwiper3", {
-slidesPerView: 7,
-spaceBetween: 10,
-loop: true,
-navigation: {
-nextEl: ".nestedSwiper3-next",
-prevEl: ".nestedSwiper3-prev",
-},
+  slidesPerView: 4,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".nestedSwiper3-next",
+    prevEl: ".nestedSwiper3-prev",
+  },
 });
 
 const nestedSwiper4 = new Swiper(".nestedSwiper4", {
-slidesPerView: 4,
-spaceBetween: 10,
-loop: true,
-navigation: {
-nextEl: ".nestedSwiper4-next",
-prevEl: ".nestedSwiper4-prev",
-},
+  slidesPerView: 4,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".nestedSwiper4-next",
+    prevEl: ".nestedSwiper4-prev",
+  },
 });
 </script>
 <!-- ===== FOOTER ===== -->
 <footer class="custom-footer">
 <p>
-© 2025 XDMARCOMS. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+© 2025 XDMARCOMS. All rights reserved. | <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy (opens in a new tab)"> Privacy Policy </a> | <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener noreferrer" aria-label="Terms of Service (opens in a new tab)"> Terms of Service </a>
 </p>
 </footer>
+<script>
+// Main Swiper
+const mainSwiper = new Swiper(".mySwiper", {
+  loop: false,
+  navigation: {
+    nextEl: ".main-next",
+    prevEl: ".main-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 40,
+});
+
+// Nested Swipers με responsive ρυθμίσεις
+const nestedSwiper1 = new Swiper(".nestedSwiper1", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  loop: true,
+  navigation: { nextEl: ".nestedSwiper1-next", prevEl: ".nestedSwiper1-prev" },
+  breakpoints: { 768: { slidesPerView: 4 } }
+});
+
+const nestedSwiper2 = new Swiper(".nestedSwiper2", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  loop: true,
+  navigation: { nextEl: ".nestedSwiper2-next", prevEl: ".nestedSwiper2-prev" },
+  breakpoints: { 768: { slidesPerView: 4 } }
+});
+
+const nestedSwiper3 = new Swiper(".nestedSwiper3", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  loop: true,
+  navigation: { nextEl: ".nestedSwiper3-next", prevEl: ".nestedSwiper3-prev" },
+  breakpoints: { 768: { slidesPerView: 4 } }
+});
+
+const nestedSwiper4 = new Swiper(".nestedSwiper4", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  loop: true,
+  navigation: { nextEl: ".nestedSwiper4-next", prevEl: ".nestedSwiper4-prev" },
+  breakpoints: { 768: { slidesPerView: 4 } }
+});
+</script>
 
 
 
